@@ -1,0 +1,13 @@
+@import "../../../common/styles/vars.css";
+
+.themeWrapper_light {
+    height: calc(100vh - 70px);
+    background: var(--main-light-bg-color);
+    color: var(--main-light-text-color);
+}
+
+.themeWrapper_dark {
+    height: calc(100vh - 70px);
+    background: var(--main-dark-bg-color);
+    color: var(--main-dark-text-color);
+}

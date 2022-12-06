@@ -1,0 +1,49 @@
+.header {
+    height: 70px;
+    background: #343434;
+}
+
+.header__navigationBlock {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+    left: -340px;
+    transition: left .3s linear;
+}
+
+.header__navigationBlock:hover {
+    left: 0;
+}
+
+
+.header__navigationBlock__circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #2EE59D;
+    border: 1px solid white;
+    animation: annoying .4s ease-in infinite alternate;
+}
+
+.header__navigationBlock__item {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.header__navigationBlock__item_active, .header__navigationBlock__item:hover {
+    color: #2EE59D;
+}
+
+
+@keyframes annoying {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
