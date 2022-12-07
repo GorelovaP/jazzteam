@@ -1,7 +1,7 @@
-import React, {DetailedHTMLProps, InputHTMLAttributes, memo} from "react";
+import React, {memo} from "react";
 import "./supperInput.css"
 
-export const SupperInput: React.FC<PropsType> = memo(
+export const SupperInput = memo(
     ({type, error, label, ...restProps}) => {
         return (
             <div className="styledInput">
@@ -14,11 +14,3 @@ export const SupperInput: React.FC<PropsType> = memo(
 )
 
 
-// types
-type PropsType = DefaultInputPropsType & {
-    type?: string
-    label?: string
-    error?: boolean
-}
-type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement>

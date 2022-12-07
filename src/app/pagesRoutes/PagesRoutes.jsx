@@ -9,14 +9,14 @@ import {InfoPage} from "../../features/infoPage/InfoPage";
 import {MainPage} from "../../features/mainPage/MainPage";
 import {LoginPage} from "../../features/loginPage/LoginPage";
 
-export enum PATH {
-    MAIN = '/',
-    LOGIN = '/login',
-    PROFILE = '/profile',
-    INFO = '/info',
-    CALENDAR = '/calendar',
-    TABLE = '/table',
-    PAGE_404 = '/404',
+export const PATH = {
+    MAIN: '/',
+    LOGIN: '/login',
+    PROFILE: '/profile',
+    INFO: '/info',
+    CALENDAR: '/calendar',
+    TABLE: '/table',
+    PAGE_404: '/404',
 }
 
 export const PagesRoutes = () => {

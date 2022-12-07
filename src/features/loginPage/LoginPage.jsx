@@ -6,14 +6,14 @@ import {SupperInput} from "../../common/components/supperInput/SupperInput";
 import {FaUserCircle} from "react-icons/fa";
 import {RiLockPasswordFill} from "react-icons/ri";
 import SuperButton from "../../common/components/supperButton/SupperButton";
-import {useAppDispatch, useAppSelector} from "../../common/hooks/appHooks";
 import {setIsLoggedIn} from "../../app/app-reducer";
 import {Navigate} from "react-router-dom";
 import {PATH} from "../../app/pagesRoutes/PagesRoutes";
+import {useDispatch, useSelector} from "react-redux";
 
 export const LoginPage = () => {
-    let dispatch = useAppDispatch()
-    const isLoggedIn = useAppSelector(state => state.app.isLoggedIn)
+    let dispatch = useDispatch()
+    const isLoggedIn = useSelector(state => state.app.isLoggedIn)
 
     const formik = useFormik({
         validationSchema: Yup.object({
