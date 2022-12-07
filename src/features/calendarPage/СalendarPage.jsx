@@ -1,5 +1,7 @@
-export const CalendarPage =()=>{
-    return <div>
+import {ThemeWrapper} from "../../common/components/themeWrapper/ThemeWrapper";
+
+export const CalendarPage = () => {
+    return <ThemeWrapper>
         Calendar
-    </div>
+    </ThemeWrapper>
 }

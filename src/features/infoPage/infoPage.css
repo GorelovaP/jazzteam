@@ -1,0 +1,18 @@
+.informationPageWrapper {
+    width: 100%;
+    height: 100%;
+    padding: 5px 30px;
+    box-sizing: border-box;
+}
+
+.informationPageWrapper__header {
+    text-align: center;
+}
+
+.informationPageWrapper__cardArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

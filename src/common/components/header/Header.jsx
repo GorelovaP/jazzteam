@@ -2,9 +2,18 @@ import {NavLink} from "react-router-dom";
 import {useMatch} from "react-router-dom";
 import {PATH} from "../../../app/pagesRoutes/PagesRoutes";
 import "./header.css"
+import {useDispatch, useSelector} from "react-redux";
+import {IoExitSharp} from "react-icons/io5";
+import {LogoutTC} from "../../../redux/login-reducer";
 
 export const Header = () => {
     const match = useMatch('/:routeKey');
+    const dispatch = useDispatch()
+    const userName = useSelector(state => state.profile.userInformation.LoginUserName)
+
+    const logOut = () => {
+        dispatch(LogoutTC())
+    }
 
     return <div className="header">
 
@@ -26,6 +35,12 @@ export const Header = () => {
                 to={PATH.TABLE}>Table</NavLink>
 
             <div className="header__navigationBlock__circle"> </div>
+
         </div>
+        {userName &&
+        <div className="header__userName">
+            {userName}
+            <IoExitSharp size={30} style={{margin: "10px", color: "white", cursor: "pointer"}} onClick={logOut}/>
+        </div>}
     </div>
 }

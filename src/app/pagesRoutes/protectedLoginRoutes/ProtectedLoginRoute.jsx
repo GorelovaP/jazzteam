@@ -4,7 +4,7 @@ import {PATH} from '../PagesRoutes'
 import {useSelector} from "react-redux";
 
 export const ProtectedLoginRoute = () => {
-    const isLoggedIn = useSelector(state => state.app.isLoggedIn)
+    const isLoggedIn = useSelector(state => state.login.isLoggedIn)
 
     return isLoggedIn ? <Outlet/> : <Navigate to={PATH.LOGIN}/>
 }

@@ -6,14 +6,15 @@ import {SupperInput} from "../../common/components/supperInput/SupperInput";
 import {FaUserCircle} from "react-icons/fa";
 import {RiLockPasswordFill} from "react-icons/ri";
 import SuperButton from "../../common/components/supperButton/SupperButton";
-import {setIsLoggedIn} from "../../app/app-reducer";
 import {Navigate} from "react-router-dom";
 import {PATH} from "../../app/pagesRoutes/PagesRoutes";
 import {useDispatch, useSelector} from "react-redux";
+import {LoginTC} from "../../redux/login-reducer";
 
 export const LoginPage = () => {
     let dispatch = useDispatch()
-    const isLoggedIn = useSelector(state => state.app.isLoggedIn)
+    const isLoggedIn = useSelector(state => state.login.isLoggedIn)
+    const loginError = useSelector(state => state.login.loginError)
 
     const formik = useFormik({
         validationSchema: Yup.object({
@@ -25,8 +26,8 @@ export const LoginPage = () => {
             password: '',
         },
         onSubmit: values => {
-            dispatch(setIsLoggedIn(values))
-            formik.resetForm()
+            dispatch(LoginTC(values))
+            //formik.resetForm()
         },
     })
 
@@ -74,6 +75,9 @@ export const LoginPage = () => {
                     <SuperButton type="submit"
                                  red={!!(formik.errors.password || formik.errors.userName)}> Login </SuperButton>
                 </div>
+                {loginError && <div className="loginPage__Wrapper__LoginForm__errorArea">
+                    {loginError}
+                </div>}
             </form>
         </div>
     </ThemeWrapper>

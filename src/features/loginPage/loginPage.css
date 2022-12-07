@@ -1,5 +1,5 @@
 .loginPage__Wrapper {
-    height: 100%;
+    height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,4 +32,17 @@
 
 .loginPage__Wrapper__LoginForm__button {
     margin-top: 20px;
+}
+
+.loginPage__Wrapper__LoginForm__errorArea {
+    box-sizing: border-box;
+    display: block;
+    max-width: 360px;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background: #ffbbaa;
+    color: #fc0000;
+    word-wrap: normal;
+    text-align: center;
 }
