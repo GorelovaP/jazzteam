@@ -19,8 +19,8 @@
 .wrapperTAbl {
     overflow-y: scroll;
     overflow-x: scroll;
-    height: 400px;
-    width: 723px;
+    height: 449px;
+    max-width: 920px;
     border: 2px solid #2EE59D;
 }
 
@@ -34,11 +34,13 @@
 }
 
 .cell {
+    box-sizing: border-box;
     border: 1px solid black;
     padding: 20px;
-    width: 100px;
-    min-width: 100px;
-    max-width: 100px;
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+    height: 86px;
 }
 
 .cell_sticky {
@@ -50,6 +52,7 @@
 
 .cell__input {
     color: black;
+    width: 100%;
 }
 
 .tableArea__header {
@@ -59,4 +62,7 @@
     border: 1px solid black;
 }
 
+.maxVisiblePriority {
+    z-index: 3;
+}
 

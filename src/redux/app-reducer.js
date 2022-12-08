@@ -7,7 +7,6 @@ export const getFromLocalStorageTC = createAsyncThunk("app/getFromLocalStorage",
         const userInformation = localStorage.getItem("UserInformation");
         const userThemeFromLocal = localStorage.getItem("Theme");
         if (userInformation) {
-
             let newLoggedUserInformation = JSON.parse(userInformation)
             let userTheme = JSON.parse(userThemeFromLocal)
             dispatch(setLoginUserInformationAC(newLoggedUserInformation))
@@ -33,15 +32,19 @@ const slice = createSlice({
         name: "app",
         initialState: {
             error: null,
+            isLoading: false
         },
         reducers: {
             setAppErrorAC(state, action) {
                 state.error = action.payload.error
+            },
+            setIsLoadingAC(state, action) {
+                state.isLoading = action.payload.isLoading
             },
         }
     }
 )
 
 export const appReducer = slice.reducer
-export const {setAppErrorAC} = slice.actions
+export const {setAppErrorAC,setIsLoadingAC} = slice.actions
 
