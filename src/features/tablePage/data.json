@@ -1,0 +1,399 @@
+[
+  {
+    "id": "00",
+    "rows": [
+      {
+        "prop": "header1",
+        "value": "Word"
+      },
+      {
+        "prop": "header2",
+        "value": "Transcription"
+      },
+      {
+        "prop": "header3",
+        "value": "Translation"
+      },
+      {
+        "prop": "header4",
+        "value": "Part of speech"
+      },
+      {
+        "prop": "header5",
+        "value": "Antonym"
+      },
+      {
+        "prop": "header6",
+        "value": "Antonym Transcription"
+      },
+      {
+        "prop": "header7",
+        "value": "Antonym Translation"
+      },
+      {
+        "prop": "header8",
+        "value": "Example"
+      }
+    ]
+  },
+  {
+    "id": "01",
+    "rows": [
+      {
+        "isEdit": false,
+        "prop": "text1",
+        "value": "full "
+      },
+      {
+        "isEdit": false,
+        "prop": "text2",
+        "value": "[fʊl]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text3",
+        "value": "полный"
+      },
+      {
+        "isEdit": false,
+        "prop": "text4",
+        "value": "adjective"
+      },
+      {
+        "isEdit": false,
+        "prop": "text5",
+        "value": "empty"
+      },
+      {
+        "isEdit": false,
+        "prop": "text6",
+        "value": "[ˈemptɪ]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text7",
+        "value": "пустой"
+      },
+      {
+        "isEdit": false,
+        "prop": "text8",
+        "value": "he lived a full life"
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "rows": [
+      {
+        "isEdit": false,
+        "prop": "text1",
+        "value": "old"
+      },
+      {
+        "isEdit": false,
+        "prop": "text2",
+        "value": "[ʊld]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text3",
+        "value": "старый"
+      },
+      {
+        "isEdit": false,
+        "prop": "text4",
+        "value": "adjective "
+      },
+      {
+        "isEdit": false,
+        "prop": "text5",
+        "value": "young"
+      },
+      {
+        "isEdit": false,
+        "prop": "text6",
+        "value": "[jʌŋ]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text7",
+        "value": "молодой"
+      },
+      {
+        "isEdit": false,
+        "prop": "text8",
+        "value": "he gave his old clothes away"
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "rows": [
+      {
+        "isEdit": false,
+        "prop": "text1",
+        "value": "light "
+      },
+      {
+        "isEdit": false,
+        "prop": "text2",
+        "value": "[laɪt]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text3",
+        "value": "свет"
+      },
+      {
+        "isEdit": false,
+        "prop": "text4",
+        "value": "noun"
+      },
+      {
+        "isEdit": false,
+        "prop": "text5",
+        "value": "dark "
+      },
+      {
+        "isEdit": false,
+        "prop": "text6",
+        "value": "[dɑːrk]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text7",
+        "value": "темнота"
+      },
+      {
+        "isEdit": false,
+        "prop": "text8",
+        "value": "the plant requires good light"
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "rows": [
+      {
+        "isEdit": false,
+        "prop": "text1",
+        "value": "open "
+      },
+      {
+        "isEdit": false,
+        "prop": "text2",
+        "value": " [ˈəʊpən]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text3",
+        "value": "открытый"
+      },
+      {
+        "isEdit": false,
+        "prop": "text4",
+        "value": "adjective"
+      },
+      {
+        "isEdit": false,
+        "prop": "text5",
+        "value": "closed "
+      },
+      {
+        "isEdit": false,
+        "prop": "text6",
+        "value": " [kləʊzd]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text7",
+        "value": "закрытый"
+      },
+      {
+        "isEdit": false,
+        "prop": "text8",
+        "value": "I have an open ticket, so I can travel any day I like"
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "rows": [
+      {
+        "isEdit": false,
+        "prop": "text1",
+        "value": "buy "
+      },
+      {
+        "isEdit": false,
+        "prop": "text2",
+        "value": "[baɪ]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text3",
+        "value": "покупать"
+      },
+      {
+        "isEdit": false,
+        "prop": "text4",
+        "value": "verb"
+      },
+      {
+        "isEdit": false,
+        "prop": "text5",
+        "value": "sell"
+      },
+      {
+        "isEdit": false,
+        "prop": "text6",
+        "value": "[sel]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text7",
+        "value": "продавать"
+      },
+      {
+        "isEdit": false,
+        "prop": "text8",
+        "value": "money can't buy happiness"
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "rows": [
+      {
+        "isEdit": false,
+        "prop": "text1",
+        "value": "early"
+      },
+      {
+        "isEdit": false,
+        "prop": "text2",
+        "value": " [ˈɜːrlɪ]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text3",
+        "value": "ранний"
+      },
+      {
+        "isEdit": false,
+        "prop": "text4",
+        "value": "adjective"
+      },
+      {
+        "isEdit": false,
+        "prop": "text5",
+        "value": "late "
+      },
+      {
+        "isEdit": false,
+        "prop": "text6",
+        "value": "[leɪt]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text7",
+        "value": "поздний"
+      },
+      {
+        "isEdit": false,
+        "prop": "text8",
+        "value": "an early goal secured victory"
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "rows": [
+      {
+        "isEdit": false,
+        "prop": "text1",
+        "value": "start "
+      },
+      {
+        "isEdit": false,
+        "prop": "text2",
+        "value": "[stɑːrt]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text3",
+        "value": "начало"
+      },
+      {
+        "isEdit": false,
+        "prop": "text4",
+        "value": "noun"
+      },
+      {
+        "isEdit": false,
+        "prop": "text5",
+        "value": "finish "
+      },
+      {
+        "isEdit": false,
+        "prop": "text6",
+        "value": "[ˈfɪnɪʃ]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text7",
+        "value": "конец"
+      },
+      {
+        "isEdit": false,
+        "prop": "text8",
+        "value": "she awoke with a start"
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "rows": [
+      {
+        "isEdit": false,
+        "prop": "text1",
+        "value": "dry "
+      },
+      {
+        "isEdit": false,
+        "prop": "text2",
+        "value": "[draɪ]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text3",
+        "value": "сухой"
+      },
+      {
+        "isEdit": false,
+        "prop": "text4",
+        "value": "adjective"
+      },
+      {
+        "isEdit": false,
+        "prop": "text5",
+        "value": "wet"
+      },
+      {
+        "isEdit": false,
+        "prop": "text6",
+        "value": "[wet]"
+      },
+      {
+        "isEdit": false,
+        "prop": "text7",
+        "value": "мокрый"
+      },
+      {
+        "isEdit": false,
+        "prop": "text8",
+        "value": "dry paint"
+      }
+    ]
+  }
+]

@@ -10,10 +10,8 @@ export const InfoPage = () => {
         <div className="informationPageWrapper">
             <h2 className="informationPageWrapper__header">Places, where you definitely haven't been</h2>
             <div className="informationPageWrapper__cardArea">
-                {information.map(el => <InfoCard name={el.name} image={el.image} link={el.link}/>)}
+                {information.map(el => <InfoCard key={el.id} name={el.name} image={el.image} link={el.link}/>)}
             </div>
-
         </div>
-
     </ThemeWrapper>
 }

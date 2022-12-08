@@ -1,0 +1,62 @@
+.tablePageWrapper {
+    width: 100%;
+    height: 100%;
+    padding: 5px 30px;
+    box-sizing: border-box;
+}
+
+.tablePageWrapper__header {
+    text-align: center;
+}
+
+.tableArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapperTAbl {
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: 400px;
+    width: 723px;
+    border: 2px solid #2EE59D;
+}
+
+.header__cell_sticky {
+    position: sticky;
+    top: 0;
+    color: black;
+    background-color: #d4d4d4;
+    z-index: 2;
+    border: 1px solid black;
+}
+
+.cell {
+    border: 1px solid black;
+    padding: 20px;
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.cell_sticky {
+    position: sticky;
+    left: 0;
+    color: black;
+    background-color: #d4d4d4;
+}
+
+.cell__input {
+    color: black;
+}
+
+.tableArea__header {
+    height: 50px;
+    min-height: 50px;
+    top: 0;
+    border: 1px solid black;
+}
+
+
