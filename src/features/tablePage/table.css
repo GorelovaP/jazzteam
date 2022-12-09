@@ -24,6 +24,11 @@
     border: 2px solid #2EE59D;
 }
 
+.tableArea__informationWrapper {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
 .header__cell_sticky {
     position: sticky;
     top: 0;
@@ -68,5 +73,23 @@
 
 .maxVisiblePriority {
     z-index: 3;
+    border: 1px solid black;
+}
+
+.tableArea__informationWrapper__span {
+    padding: 5px;
+}
+
+.tableArea__informationWrapper__span__count {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tableArea__informationWrapper__span__count_green {
+    color: #2EE59D;
+}
+
+.tableArea__informationWrapper__span__count_blue {
+    color: #1546f1;
 }
 

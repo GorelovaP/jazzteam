@@ -1,6 +1,5 @@
 import {ThemeWrapper} from "../../common/components/themeWrapper/ThemeWrapper";
 import {useEffect} from "react";
-import "./table.css"
 import {
     changeIsSelectedAC,
     getTableDataFromDbTC,
@@ -8,6 +7,7 @@ import {
 import {useDispatch, useSelector} from "react-redux";
 import {Loading} from "../../common/components/loading/Loading";
 import {EditableSpan} from "../../common/components/editableSpan/EditableSpan";
+import "./table.css"
 
 
 export const TablePage = () => {
@@ -15,6 +15,7 @@ export const TablePage = () => {
     const tableInfo = useSelector(state => state.table.tableInfo)
     const isLoading = useSelector(state => state.app.isLoading)
     const selectedRows = useSelector(state => state.table.selectedRows)
+    const totalAmount = useSelector(state => state.table.totalAmount)
 
     useEffect(() => {
         dispatch(getTableDataFromDbTC())
@@ -24,25 +25,18 @@ export const TablePage = () => {
         dispatch(changeIsSelectedAC(id))
     }
 
-    const rows = tableInfo.length && tableInfo.map(obj => {
+    const rows = tableInfo.map(obj => {
         const cells = obj.rows.map(field => {
-            //1 столбец статический
             if (obj.rows[0] === field) {
-                return <td onClick={() => selectRow({id: obj.id})}
-                           className={`row__cell row__cell_sticky ${obj.isSelected === true ? "row__cell_selected" : ""}`}
-                           key={field.prop}>
-                    <span>{field.value} </span>
-                </td>
+                return <td key={field.prop}
+                           onClick={() => selectRow({id: obj.id})}
+                           className={`row__cell row__cell_sticky ${obj.isSelected === true ? "row__cell_selected" : ""}`}>{field.value}</td>
             }
-            return <td className="row__cell" key={field.prop}>
-                <EditableSpan id={obj.id} prop={field.prop} fieldValue={field.value}/>
-            </td>;
+            return <td className="row__cell" key={field.prop}><EditableSpan id={obj.id} prop={field.prop}
+                                                                            fieldValue={field.value}/></td>;
         });
-
-        return <tr className={`row ${obj.isSelected === true ? "row_selected" : ""}`}
-                   key={obj.id}>{cells}</tr>
+        return <tr key={obj.id} className={`row ${obj.isSelected === true ? "row_selected" : ""}`}>{cells}</tr>
     });
-
 
     return <ThemeWrapper>
         <div className="tablePageWrapper">
@@ -65,14 +59,19 @@ export const TablePage = () => {
                                     <th className="row__cell header__cell_sticky">Example</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                {rows}
-                                </tbody>
+                                <tbody>{rows}</tbody>
                             </table>
                         </div>
-                        <div>
-                            total amount of data :
-                            selectedRows : {selectedRows}
+                        <div className="tableArea__informationWrapper">
+                           <span className="tableArea__informationWrapper__span">
+                               Total amount of data : <span
+                               className="tableArea__informationWrapper__span__count_blue">{totalAmount}</span>
+                           </span>
+                            <span className="tableArea__informationWrapper__span">
+                                  SelectedRows : <span className="tableArea__informationWrapper__span__count_green">
+                                {selectedRows}
+                            </span>
+                            </span>
                         </div>
                     </>
                 }

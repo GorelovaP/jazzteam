@@ -4,35 +4,35 @@
     "isSelected": false,
     "rows": [
       {
-        "prop": "text1",
+        "prop": "text11",
         "value": "full "
       },
       {
-        "prop": "text2",
+        "prop": "text12",
         "value": "[fʊl]"
       },
       {
-        "prop": "text3",
+        "prop": "text13",
         "value": "полный"
       },
       {
-        "prop": "text4",
+        "prop": "text14",
         "value": "adjective"
       },
       {
-        "prop": "text5",
+        "prop": "text15",
         "value": "empty"
       },
       {
-        "prop": "text6",
+        "prop": "text16",
         "value": "[ˈemptɪ]"
       },
       {
-        "prop": "text7",
+        "prop": "text17",
         "value": "пустой"
       },
       {
-        "prop": "text8",
+        "prop": "text18",
         "value": "he lived a full life"
       }
     ]
@@ -42,35 +42,35 @@
     "isSelected": false,
     "rows": [
       {
-        "prop": "text1",
+        "prop": "text21",
         "value": "old"
       },
       {
-        "prop": "text2",
+        "prop": "text22",
         "value": "[ʊld]"
       },
       {
-        "prop": "text3",
+        "prop": "text23",
         "value": "старый"
       },
       {
-        "prop": "text4",
+        "prop": "text24",
         "value": "adjective "
       },
       {
-        "prop": "text5",
+        "prop": "text25",
         "value": "young"
       },
       {
-        "prop": "text6",
+        "prop": "text26",
         "value": "[jʌŋ]"
       },
       {
-        "prop": "text7",
+        "prop": "text27",
         "value": "молодой"
       },
       {
-        "prop": "text8",
+        "prop": "text28",
         "value": "he gave his old clothes away"
       }
     ]
@@ -80,35 +80,35 @@
     "isSelected": false,
     "rows": [
       {
-        "prop": "text1",
+        "prop": "text31",
         "value": "light "
       },
       {
-        "prop": "text2",
+        "prop": "text32",
         "value": "[laɪt]"
       },
       {
-        "prop": "text3",
+        "prop": "text33",
         "value": "свет"
       },
       {
-        "prop": "text4",
+        "prop": "text34",
         "value": "noun"
       },
       {
-        "prop": "text5",
+        "prop": "text35",
         "value": "dark "
       },
       {
-        "prop": "text6",
+        "prop": "text36",
         "value": "[dɑːrk]"
       },
       {
-        "prop": "text7",
+        "prop": "text37",
         "value": "темнота"
       },
       {
-        "prop": "text8",
+        "prop": "text38",
         "value": "the plant requires good light"
       }
     ]
@@ -118,35 +118,35 @@
     "isSelected": false,
     "rows": [
       {
-        "prop": "text1",
+        "prop": "text41",
         "value": "open "
       },
       {
-        "prop": "text2",
+        "prop": "text42",
         "value": " [ˈəʊpən]"
       },
       {
-        "prop": "text3",
+        "prop": "text43",
         "value": "открытый"
       },
       {
-        "prop": "text4",
+        "prop": "text44",
         "value": "adjective"
       },
       {
-        "prop": "text5",
+        "prop": "text45",
         "value": "closed "
       },
       {
-        "prop": "text6",
+        "prop": "text46",
         "value": " [kləʊzd]"
       },
       {
-        "prop": "text7",
+        "prop": "text47",
         "value": "закрытый"
       },
       {
-        "prop": "text8",
+        "prop": "text48",
         "value": "I have an open ticket, so I can travel any day I like"
       }
     ]
@@ -156,35 +156,35 @@
     "isSelected": false,
     "rows": [
       {
-        "prop": "text1",
+        "prop": "text51",
         "value": "buy "
       },
       {
-        "prop": "text2",
+        "prop": "text52",
         "value": "[baɪ]"
       },
       {
-        "prop": "text3",
+        "prop": "text53",
         "value": "покупать"
       },
       {
-        "prop": "text4",
+        "prop": "text54",
         "value": "verb"
       },
       {
-        "prop": "text5",
+        "prop": "text55",
         "value": "sell"
       },
       {
-        "prop": "text6",
+        "prop": "text56",
         "value": "[sel]"
       },
       {
-        "prop": "text7",
+        "prop": "text57",
         "value": "продавать"
       },
       {
-        "prop": "text8",
+        "prop": "text58",
         "value": "money can't buy happiness"
       }
     ]
@@ -194,35 +194,35 @@
     "isSelected": false,
     "rows": [
       {
-        "prop": "text1",
+        "prop": "text61",
         "value": "early"
       },
       {
-        "prop": "text2",
+        "prop": "text62",
         "value": " [ˈɜːrlɪ]"
       },
       {
-        "prop": "text3",
+        "prop": "text63",
         "value": "ранний"
       },
       {
-        "prop": "text4",
+        "prop": "text64",
         "value": "adjective"
       },
       {
-        "prop": "text5",
+        "prop": "text65",
         "value": "late "
       },
       {
-        "prop": "text6",
+        "prop": "text66",
         "value": "[leɪt]"
       },
       {
-        "prop": "text7",
+        "prop": "text67",
         "value": "поздний"
       },
       {
-        "prop": "text8",
+        "prop": "text68",
         "value": "an early goal secured victory"
       }
     ]
@@ -232,27 +232,35 @@
     "isSelected": false,
     "rows": [
       {
-        "value": "start "
+        "prop": "text71",
+        "value": "start"
       },
       {
+        "prop": "text72",
         "value": "[stɑːrt]"
       },
       {
+        "prop": "text73",
         "value": "начало"
       },
       {
+        "prop": "text74",
         "value": "noun"
       },
       {
+        "prop": "text75",
         "value": "finish "
       },
       {
+        "prop": "text76",
         "value": "[ˈfɪnɪʃ]"
       },
       {
+        "prop": "text77",
         "value": "конец"
       },
       {
+        "prop": "text78",
         "value": "she awoke with a start"
       }
     ]
@@ -262,35 +270,35 @@
     "isSelected": false,
     "rows": [
       {
-        "prop": "text1",
+        "prop": "text81",
         "value": "dry "
       },
       {
-        "prop": "text2",
+        "prop": "text82",
         "value": "[draɪ]"
       },
       {
-        "prop": "text3",
+        "prop": "text83",
         "value": "сухой"
       },
       {
-        "prop": "text4",
+        "prop": "text84",
         "value": "adjective"
       },
       {
-        "prop": "text5",
+        "prop": "text85",
         "value": "wet"
       },
       {
-        "prop": "text6",
+        "prop": "text86",
         "value": "[wet]"
       },
       {
-        "prop": "text7",
+        "prop": "text87",
         "value": "мокрый"
       },
       {
-        "prop": "text8",
+        "prop": "text88",
         "value": "dry paint"
       }
     ]

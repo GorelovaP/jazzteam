@@ -21,7 +21,8 @@ const slice = createSlice({
         name: "table",
         initialState: {
             tableInfo: [],
-            selectedRows: null
+            selectedRows: null,
+            totalAmount: null,
         },
         reducers: {
             setAppErrorAC(state, action) {
@@ -54,7 +55,7 @@ const slice = createSlice({
                 })
                 state.selectedRows = selectedRowsNumber
                 //total amount of data
-
+                state.totalAmount = action.payload.data.length * action.payload.data[0].rows.length
                 //write the data to the state
                 state.tableInfo = action.payload.data
             })
