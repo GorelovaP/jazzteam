@@ -5,14 +5,14 @@ import {errorHandler} from "../common/helpers/errorHendler";
 
 
 export const getTableDataFromDbTC = createAsyncThunk("table/getTableDataFromDb", async (param, {dispatch}) => {
-        dispatch(setIsLoadingAC(true))
+        dispatch(setIsLoadingAC({isLoading: true}))
         try {
             const res = await tableAPI.getTableData()
             return {data: res.data}
         } catch (err) {
             errorHandler({err, dispatch})
         } finally {
-            dispatch(setIsLoadingAC(false))
+            dispatch(setIsLoadingAC({isLoading: false}))
         }
     }
 )
@@ -33,11 +33,15 @@ const slice = createSlice({
                 needRows[cellIndex].isEdit = action.payload.mode
             },
             changeValueAC(state, action) {
-                debugger
                 const objIndex = state.tableInfo.findIndex(obj => obj.id === action.payload.id)
                 const needRows = state.tableInfo[objIndex].rows
                 const cellIndex = needRows.findIndex(cell => cell.prop === action.payload.prop)
-                needRows[cellIndex].value = action.payload.event.target.value
+                needRows[cellIndex].value = action.payload.event
+            },
+            changeIsSelectedAC(state, action) {
+                debugger
+                const objIndex = state.tableInfo.findIndex(obj => obj.id === action.payload.id)
+                state.tableInfo[objIndex].isSelected = !state.tableInfo[objIndex].isSelected
             }
         },
         extraReducers: builder => {
@@ -49,4 +53,4 @@ const slice = createSlice({
 )
 
 export const tableReducer = slice.reducer
-export const {changeEditModeAC, changeValueAC} = slice.actions
+export const {changeEditModeAC, changeValueAC, changeIsSelectedAC} = slice.actions

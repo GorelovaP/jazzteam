@@ -2,7 +2,7 @@ import {ThemeWrapper} from "../../common/components/themeWrapper/ThemeWrapper";
 import {useEffect} from "react";
 import "./table.css"
 import {
-    changeEditModeAC,
+    changeEditModeAC, changeIsSelectedAC,
     changeValueAC,
     getTableDataFromDbTC,
 } from "../../redux/table-reducer";
@@ -34,13 +34,17 @@ export const TablePage = () => {
         dispatch(changeValueAC(id, prop, event))
     }
 
+    const selectRow = (id) => {
+        dispatch(changeIsSelectedAC(id))
+    }
+
     const getHeaderRow = () => {
         if (tableInfo.length) {
             const headerCells = tableInfo[0].rows.map(field => {
                 return tableInfo[0].rows[0] === field
                     ? <th key={field.prop}
-                          className="cell cell_sticky header__cell_sticky maxVisiblePriority ">{field.value}</th>
-                    : <th key={field.prop} className="cell header__cell_sticky">{field.value}</th>
+                          className="row__cell row__cell_sticky header__cell_sticky maxVisiblePriority ">{field.value}</th>
+                    : <th key={field.prop} className="row__cell header__cell_sticky">{field.value}</th>
             })
             return <tr>{headerCells}</tr>
         }
@@ -53,6 +57,7 @@ export const TablePage = () => {
         if (tableInfo[0].id === obj.id) {
             return null
         }
+
         const cells = obj.rows.map(field => {
             let elem;
             if (!field.isEdit) {
@@ -60,10 +65,10 @@ export const TablePage = () => {
                     onClick={() => changeEditMode({id: obj.id, prop: field.prop, mode: true})}>  {field.value} </span>
             } else {
                 elem = <input
-                    className="cell__input"
+                    className="row__cell__input"
                     autoFocus
                     value={field.value}
-                    onChange={(event) => changeValue({id: obj.id, prop: field.prop, event: event})}
+                    onChange={(event) => changeValue({id: obj.id, prop: field.prop, event: event.target.value})}
                     onBlur={() => changeEditMode({id: obj.id, prop: field.prop, mode: false})}
                     onKeyDown={(event) => closeOnEnterEditMode(event, {id: obj.id, prop: field.prop, mode: false})}
                 />;
@@ -72,13 +77,16 @@ export const TablePage = () => {
             //1 столбец статический
             if (obj.rows[0] === field) {
                 elem = <span>{field.value} </span>;
-                return <td className="cell cell_sticky" key={field.prop}>{elem}</td>;
+                return <td onClick={() => selectRow({id: obj.id})}
+                           className={`row__cell row__cell_sticky ${obj.isSelected === true ? "row__cell_selected" : ""}`}
+                           key={field.prop}>{elem}</td>
             }
 
-            return <td className="cell" key={field.prop}>{elem}</td>;
+            return <td className="row__cell" key={field.prop}>{elem}</td>;
         });
 
-        return <tr key={obj.id}>{cells}</tr>;
+        return <tr className={`row ${obj.isSelected === true ? "row_selected" : ""}`}
+                   key={obj.id}>{cells}</tr>
     });
 
 

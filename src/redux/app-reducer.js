@@ -46,5 +46,5 @@ const slice = createSlice({
 )
 
 export const appReducer = slice.reducer
-export const {setAppErrorAC,setIsLoadingAC} = slice.actions
+export const {setAppErrorAC, setIsLoadingAC} = slice.actions
 

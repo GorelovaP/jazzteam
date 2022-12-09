@@ -38,6 +38,7 @@
   },
   {
     "id": "01",
+    "isSelected": false,
     "rows": [
       {
         "isEdit": false,
@@ -83,6 +84,7 @@
   },
   {
     "id": "02",
+    "isSelected": false,
     "rows": [
       {
         "isEdit": false,
@@ -128,6 +130,7 @@
   },
   {
     "id": "03",
+    "isSelected": false,
     "rows": [
       {
         "isEdit": false,
@@ -173,6 +176,7 @@
   },
   {
     "id": "04",
+    "isSelected": false,
     "rows": [
       {
         "isEdit": false,
@@ -218,6 +222,7 @@
   },
   {
     "id": "05",
+    "isSelected": false,
     "rows": [
       {
         "isEdit": false,
@@ -263,6 +268,7 @@
   },
   {
     "id": "06",
+    "isSelected": false,
     "rows": [
       {
         "isEdit": false,
@@ -308,6 +314,7 @@
   },
   {
     "id": "07",
+    "isSelected": false,
     "rows": [
       {
         "isEdit": false,
@@ -353,6 +360,7 @@
   },
   {
     "id": "08",
+    "isSelected": false,
     "rows": [
       {
         "isEdit": false,
