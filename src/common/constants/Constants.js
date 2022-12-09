@@ -1,6 +1,5 @@
 export const COLORS = {
-    text: 'black',
-    background: 'white',
-    primary: 'rebeccapurple',
-
+  text: "black",
+  background: "white",
+  primary: "rebeccapurple",
 };

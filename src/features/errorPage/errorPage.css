@@ -1,16 +1,16 @@
 .errorPage__Wrapper {
-    height: calc(100vh - 70px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .errorPage__Wrapper__errorCode {
-    font-size: 40px;
-    color: #ff3c3c;
+  font-size: 40px;
+  color: #ff3c3c;
 }
 
 .errorPage__Wrapper__description {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

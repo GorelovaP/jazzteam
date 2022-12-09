@@ -1,38 +1,38 @@
 .infoCard__wrapper {
-    position: relative;
-    height: 320px;
-    width: 340px;
-    background: silver;
-    -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
-    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
-    margin: 10px;
-    border-radius: 20px;
-    border: 1px solid #cecece;
+  position: relative;
+  height: 320px;
+  width: 340px;
+  background: silver;
+  -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  margin: 10px;
+  border-radius: 20px;
+  border: 1px solid #cecece;
 }
 
 .infoCard__wrapper:hover {
-    transform: scale(1.04);
+  transform: scale(1.04);
 }
 
 .infoCard__wrapper__img {
-    border-radius: 20px 20px 0 0;
-    width: 100%;
-    height: 200px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 200px;
 }
 
 .infoCard__wrapper__name {
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
 }
 
 .infoCard__wrapper__linkArea {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .infoCard__wrapper__linkArea__link {
-    color: #0b361d;
-    word-wrap: anywhere;
+  color: #0b361d;
+  word-wrap: anywhere;
 }

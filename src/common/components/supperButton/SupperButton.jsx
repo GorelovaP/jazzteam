@@ -1,20 +1,9 @@
-import s from './supperButton.module.css'
+import s from "./supperButton.module.css";
 
+const SuperButton = ({ red, className, ...restProps }) => {
+  const finalClassName = `${s.default} ${red ? s.red : ""} `;
 
-const SuperButton = (
-    {
-        red, className,
-        ...restProps
-    }
-) => {
-    const finalClassName = `${s.default} ${red ? s.red : ""} `
+  return <button className={finalClassName} {...restProps} />;
+};
 
-    return (
-        <button
-            className={finalClassName}
-            {...restProps}
-        />
-    )
-}
-
-export default SuperButton
+export default SuperButton;

@@ -1,23 +1,23 @@
 .snackBarError {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    bottom: 20px;
-    padding: 5px 10px 5px 5px;
-    left: 20px;
-    background: red;
-    color: #ffffff;
-    border-radius: 20px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 20px;
+  padding: 5px 10px 5px 5px;
+  left: 20px;
+  background: red;
+  color: #ffffff;
+  border-radius: 20px;
 }
 
 .snackBarError__text {
-    padding: 5px 15px;
+  padding: 5px 15px;
 }
 
 .snackBarError__cross {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .snackBarError__cross:active {
-    transform: translate(1px, 1px);
+  transform: translate(1px, 1px);
 }

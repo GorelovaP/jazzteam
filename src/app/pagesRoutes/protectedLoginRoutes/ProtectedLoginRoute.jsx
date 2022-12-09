@@ -1,10 +1,11 @@
-import {Navigate, Outlet} from 'react-router-dom'
+import { Navigate, Outlet } from "react-router-dom";
 
-import {PATH} from '../PagesRoutes'
-import {useSelector} from "react-redux";
+import { PATH } from "../PagesRoutes";
+import { useSelector } from "react-redux";
+import { geIsLoggedInSelector } from "../../../redux/login/login-selectors";
 
 export const ProtectedLoginRoute = () => {
-    const isLoggedIn = useSelector(state => state.login.isLoggedIn)
+  const isLoggedIn = useSelector(geIsLoggedInSelector);
 
-    return isLoggedIn ? <Outlet/> : <Navigate to={PATH.LOGIN}/>
-}
+  return isLoggedIn ? <Outlet /> : <Navigate to={PATH.LOGIN} />;
+};

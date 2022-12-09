@@ -1,20 +1,20 @@
 .mainPage__Wrapper {
-    height: calc(100vh - 70px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainPage__Wrapper__textBlock {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 400px;
-    height: 250px;
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid #2EE59D;;
-    background-color: #a0a0a0;
-    color: #2EE59D;
-    font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  height: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #2ee59d;
+  background-color: #a0a0a0;
+  color: #2ee59d;
+  font-size: 24px;
 }

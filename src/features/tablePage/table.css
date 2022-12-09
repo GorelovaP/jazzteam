@@ -1,95 +1,94 @@
 .tablePageWrapper {
-    width: 100%;
-    height: 100%;
-    padding: 5px 30px;
-    box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 5px 30px;
+  box-sizing: border-box;
 }
 
 .tablePageWrapper__header {
-    text-align: center;
+  text-align: center;
 }
 
 .tableArea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .wrapperTAbl {
-    overflow-y: scroll;
-    overflow-x: scroll;
-    height: 449px;
-    max-width: 920px;
-    border: 2px solid #2EE59D;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  height: 449px;
+  max-width: 920px;
+  border: 2px solid #2ee59d;
 }
 
 .tableArea__informationWrapper {
-    margin-top: 20px;
-    font-size: 20px;
+  margin-top: 20px;
+  font-size: 20px;
 }
 
 .header__cell_sticky {
-    position: sticky;
-    top: 0;
-    color: black;
-    background-color: #d4d4d4;
-    z-index: 2;
-    border: 1px solid black;
+  position: sticky;
+  top: 0;
+  color: black;
+  background-color: #d4d4d4;
+  z-index: 2;
+  border: 1px solid black;
 }
 
 .row_selected {
-    background: #86e3bf;
-    color: black;
+  background: #86e3bf;
+  color: black;
 }
 
 .row__cell {
-    box-sizing: border-box;
-    border: 1px solid black;
-    padding: 20px;
-    width: 180px;
-    min-width: 180px;
-    max-width: 180px;
-    height: 86px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 20px;
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  height: 86px;
 }
 
 .row__cell_sticky {
-    position: sticky;
-    left: 0;
-    color: black;
-    background-color: #d4d4d4;
+  position: sticky;
+  left: 0;
+  color: black;
+  background-color: #d4d4d4;
 }
 
 .row__cell_selected {
-    background: #6eba9c;
+  background: #6eba9c;
 }
 
 .tableArea__header {
-    height: 50px;
-    min-height: 50px;
-    top: 0;
-    border: 1px solid black;
+  height: 50px;
+  min-height: 50px;
+  top: 0;
+  border: 1px solid black;
 }
 
 .maxVisiblePriority {
-    z-index: 3;
-    border: 1px solid black;
+  z-index: 3;
+  border: 1px solid black;
 }
 
 .tableArea__informationWrapper__span {
-    padding: 5px;
+  padding: 5px;
 }
 
 .tableArea__informationWrapper__span__count {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .tableArea__informationWrapper__span__count_green {
-    color: #2EE59D;
+  color: #2ee59d;
 }
 
 .tableArea__informationWrapper__span__count_blue {
-    color: #1546f1;
+  color: #1546f1;
 }
-

@@ -1,61 +1,59 @@
 .profilePageWrapper {
-    height: calc(100vh - 70px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profilePageWrapper__profile {
-    box-sizing: border-box;
-    height: calc(100% - 40px);
-    width: 600px;
-    margin: 20px;
-    padding: 30px;
-    background: silver;
-    border-radius: 5px;
-    -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
-    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  box-sizing: border-box;
+  height: calc(100% - 40px);
+  width: 600px;
+  margin: 20px;
+  padding: 30px;
+  background: silver;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
 }
 
 .profilePageWrapper__profile__photo {
-    display: block;
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
-    border: 1px solid grey;
-    margin: 10px auto;
+  display: block;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  margin: 10px auto;
 }
 
 .profilePageWrapper__profile__information {
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .profilePageWrapper__profile__information__header {
-    color: #343434;
+  color: #343434;
 }
 
 .profilePageWrapper__profile__information__items {
-    padding: 0;
-    margin: 0;
-    column-count: 2;
-    list-style-type: none;
+  padding: 0;
+  margin: 0;
+  column-count: 2;
+  list-style-type: none;
 }
 
 .profilePageWrapper__profile__information__items__item {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .profileItem__key {
-    color: #343434;
-    font-weight: bold;
+  color: #343434;
+  font-weight: bold;
 }
 
 .profileItem__key {
-    color: #343434;
-    font-weight: bold;
+  color: #343434;
+  font-weight: bold;
 }

@@ -1,23 +1,23 @@
-import React, {useEffect} from 'react';
-import './App.css';
-import {PagesRoutes} from "./pagesRoutes/PagesRoutes";
-import {Header} from "../common/components/header/Header";
-import {useDispatch} from "react-redux";
-import {getFromLocalStorageTC} from "../redux/app-reducer";
+import React, { useEffect } from "react";
+import "./App.css";
+import { PagesRoutes } from "./pagesRoutes/PagesRoutes";
+import { Header } from "../common/components/header/Header";
+import { useDispatch } from "react-redux";
+import { getFromLocalStorageTC } from "../redux/app/app-reducer";
 
 function App() {
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getFromLocalStorageTC())
-    }, [])
+  useEffect(() => {
+    dispatch(getFromLocalStorageTC());
+  }, []);
 
-    return (
-        <div>
-            <Header/>
-            <PagesRoutes/>
-        </div>
-    );
+  return (
+    <div>
+      <Header />
+      <PagesRoutes />
+    </div>
+  );
 }
 
 export default App;
