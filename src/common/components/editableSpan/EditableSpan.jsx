@@ -1,6 +1,6 @@
 import {memo, useState} from "react";
 import {useDispatch} from "react-redux";
-import {changeValueAC} from "../../../redux/table-reducer";
+import {setTableDataToDbTC} from "../../../redux/table-reducer";
 import "./editableSpan.css"
 
 export const EditableSpan = memo(({fieldValue, id, prop}) => {
@@ -15,7 +15,7 @@ export const EditableSpan = memo(({fieldValue, id, prop}) => {
     const changeFinalValue = () => {
         if (value.trim().length) {
             changeEditMode(false)
-            dispatch(dispatch(changeValueAC({id, prop, value})))
+            dispatch(setTableDataToDbTC({id, prop, value}))
         }
     }
 

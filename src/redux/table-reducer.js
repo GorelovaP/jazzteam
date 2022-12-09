@@ -5,8 +5,8 @@ import {errorHandler} from "../common/helpers/errorHendler";
 
 
 export const getTableDataFromDbTC = createAsyncThunk("table/getTableDataFromDb", async (param, {dispatch}) => {
-        dispatch(setIsLoadingAC({isLoading: true}))
         try {
+            dispatch(setIsLoadingAC({isLoading: true}))
             const res = await tableAPI.getTableData()
             return {data: res.data}
         } catch (err) {
@@ -16,6 +16,37 @@ export const getTableDataFromDbTC = createAsyncThunk("table/getTableDataFromDb",
         }
     }
 )
+
+export const setTableDataToDbTC = createAsyncThunk("table/setTableDataToDb", async ({id, prop, value}, {
+        dispatch,
+        getState
+    }) => {
+        try {
+            const state = getState()
+            if (state.table.tableInfo.length) {
+                const newData = state.table.tableInfo.map(obj => {
+                    if (obj.id === id) {
+                        const rows = obj.rows.map(field => {
+                            if (field.prop === prop) {
+                                return {...field, value: value}
+                            } else {
+                                return field;
+                            }
+                        });
+                        return {id, rows};
+                    }
+                }).filter(el => el !== undefined)[0]
+                await tableAPI.setTableData(newData, id)
+                dispatch(getTableDataFromDbTC())
+            }
+        } catch (err) {
+            errorHandler({err, dispatch})
+        } finally {
+            dispatch(setIsLoadingAC({isLoading: false}))
+        }
+    }
+)
+
 
 const slice = createSlice({
         name: "table",
@@ -27,13 +58,6 @@ const slice = createSlice({
         reducers: {
             setAppErrorAC(state, action) {
                 state.error = action.payload.error
-            },
-            changeValueAC(state, action) {
-                debugger
-                const objIndex = state.tableInfo.findIndex(obj => obj.id === action.payload.id)
-                const needRows = state.tableInfo[objIndex].rows
-                const cellIndex = needRows.findIndex(cell => cell.prop === action.payload.prop)
-                needRows[cellIndex].value = action.payload.value
             },
             changeIsSelectedAC(state, action) {
                 const objIndex = state.tableInfo.findIndex(obj => obj.id === action.payload.id)
@@ -64,4 +88,4 @@ const slice = createSlice({
 )
 
 export const tableReducer = slice.reducer
-export const {changeValueAC, changeIsSelectedAC} = slice.actions
+export const {changeIsSelectedAC} = slice.actions

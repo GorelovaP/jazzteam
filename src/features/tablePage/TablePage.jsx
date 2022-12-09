@@ -18,8 +18,11 @@ export const TablePage = () => {
     const totalAmount = useSelector(state => state.table.totalAmount)
 
     useEffect(() => {
-        dispatch(getTableDataFromDbTC())
+        if (tableInfo.length === 0) {
+            dispatch(getTableDataFromDbTC())
+        }
     }, []);
+
 
     const selectRow = (id) => {
         dispatch(changeIsSelectedAC(id))
