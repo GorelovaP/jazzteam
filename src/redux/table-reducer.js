@@ -20,32 +20,42 @@ export const getTableDataFromDbTC = createAsyncThunk("table/getTableDataFromDb",
 const slice = createSlice({
         name: "table",
         initialState: {
-            tableInfo: []
+            tableInfo: [],
+            selectedRows: null
         },
         reducers: {
             setAppErrorAC(state, action) {
                 state.error = action.payload.error
             },
-            changeEditModeAC(state, action) {
-                const objIndex = state.tableInfo.findIndex(obj => obj.id === action.payload.id)
-                const needRows = state.tableInfo[objIndex].rows
-                const cellIndex = needRows.findIndex(cell => cell.prop === action.payload.prop)
-                needRows[cellIndex].isEdit = action.payload.mode
-            },
             changeValueAC(state, action) {
-                const objIndex = state.tableInfo.findIndex(obj => obj.id === action.payload.id)
-                const needRows = state.tableInfo[objIndex].rows
-                const cellIndex = needRows.findIndex(cell => cell.prop === action.payload.prop)
-                needRows[cellIndex].value = action.payload.event
-            },
-            changeIsSelectedAC(state, action) {
                 debugger
                 const objIndex = state.tableInfo.findIndex(obj => obj.id === action.payload.id)
+                const needRows = state.tableInfo[objIndex].rows
+                const cellIndex = needRows.findIndex(cell => cell.prop === action.payload.prop)
+                needRows[cellIndex].value = action.payload.value
+            },
+            changeIsSelectedAC(state, action) {
+                const objIndex = state.tableInfo.findIndex(obj => obj.id === action.payload.id)
+                state.tableInfo[objIndex].isSelected
+                    ? state.selectedRows = state.selectedRows - 1
+                    : state.selectedRows = state.selectedRows + 1
                 state.tableInfo[objIndex].isSelected = !state.tableInfo[objIndex].isSelected
-            }
+            },
+
         },
         extraReducers: builder => {
             builder.addCase(getTableDataFromDbTC.fulfilled, (state, action) => {
+                // count the selected rows
+                let selectedRowsNumber = 0
+                action.payload.data.map(obj => {
+                    if (obj.isSelected) {
+                        selectedRowsNumber++
+                    }
+                })
+                state.selectedRows = selectedRowsNumber
+                //total amount of data
+
+                //write the data to the state
                 state.tableInfo = action.payload.data
             })
         }
@@ -53,4 +63,4 @@ const slice = createSlice({
 )
 
 export const tableReducer = slice.reducer
-export const {changeEditModeAC, changeValueAC, changeIsSelectedAC} = slice.actions
+export const {changeValueAC, changeIsSelectedAC} = slice.actions

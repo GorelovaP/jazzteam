@@ -2,9 +2,9 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {setLoginUserInformationAC, setThemeToStateAC} from "./profile-reducer";
 import {deleteFromLocalStorageTC, setToLocalStorageTC} from "./app-reducer";
 
-//Санки реализованы для более легкого дальнейшего расширения приложения(если вдруг оно будет)
+//TC are implemented for easier further expansion of the application (if suddenly it will be)
 export const LoginTC = createAsyncThunk("login/LoginTC", (params, {dispatch, rejectWithValue}) => {
-        //Если бы была api, был бы запрос
+        //If there was an api, there would be a request
         if (params.userName === "Admin" && params.password === "12345678") {
             let NewUserInformation = {
                 LoginUserName: params.userName,
@@ -15,7 +15,6 @@ export const LoginTC = createAsyncThunk("login/LoginTC", (params, {dispatch, rej
                 Phone: "+375 29 XXX XX XX",
                 EnglishLevel: "B1",
             }
-
             dispatch(setLoginErrorAC({loginError: ""}))
             dispatch(setLoginUserInformationAC(NewUserInformation))
             dispatch(setToLocalStorageTC({userInformation: NewUserInformation}))
@@ -32,7 +31,6 @@ export const LogoutTC = createAsyncThunk("login/LogoutTC", (params, {dispatch}) 
         dispatch(setLoginUserInformationAC({}))
         dispatch(setThemeToStateAC({theme: "dark"}))
         dispatch(deleteFromLocalStorageTC())
-
         return false
     }
 )

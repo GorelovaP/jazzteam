@@ -3,7 +3,6 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
 export const setToLocalStorageThemeTC = createAsyncThunk("profile/setToLocalStorageTheme", ({theme}, {dispatch}) => {
         localStorage.setItem("Theme", JSON.stringify(theme));
-
         return {theme: theme}
     }
 )
@@ -32,8 +31,6 @@ const slice = createSlice({
     },
     extraReducers: builder => {
         builder.addCase(setToLocalStorageThemeTC.fulfilled, (state, action) => {
-            debugger
-            console.log(action.payload.theme)
             state.theme = action.payload.theme
         })
 

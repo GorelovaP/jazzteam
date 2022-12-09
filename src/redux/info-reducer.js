@@ -53,5 +53,4 @@ const slice = createSlice({
     },
 })
 export const infoReducer = slice.reducer
-//export const {} = slice.actions
 
