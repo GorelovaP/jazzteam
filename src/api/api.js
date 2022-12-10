@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const instance = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "http://localhost:4000/",
 });
 
 export const tableAPI = {
@@ -11,5 +11,11 @@ export const tableAPI = {
   setTableData(newCell, id) {
     debugger;
     return instance.put(`tableData/${id}`, newCell);
+  },
+};
+
+export const calendarAPI = {
+  getTableData() {
+    return instance.get("calendarEvents");
   },
 };

@@ -7,7 +7,6 @@ export const getTableDataFromDbTC = createAsyncThunk(
   "table/getTableDataFromDb",
   async (param, { dispatch }) => {
     try {
-      debugger;
       dispatch(setIsLoadingAC({ isLoading: true }));
       const res = await tableAPI.getTableData();
       return { data: res.data };

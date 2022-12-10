@@ -4,3 +4,6 @@ export const getErrorSelector = (state) => {
 export const getIsLoadingSelector = (state) => {
   return state.app.isLoading;
 };
+export const isLocalStorageEmptySelector = (state) => {
+  return state.app.isLocalStorageEmpty;
+};

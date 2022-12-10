@@ -1,0 +1,33 @@
+
+.calendar__table__cell {
+    font-weight: bold;
+    min-height: 140px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #8d8d8d;
+    background-color: #3e3e3e;
+}
+
+.calendar__table__cell__day {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.calendar__table__cell__day__name {
+    font-weight: bold;
+    color: #2ee59d;
+}
+
+.calendar__table__cell__day__number {
+    color: #8d8d8d;
+}
+
+.calendar__table__cell__day__number_current {
+    color: white;
+}
+
+.calendar__table__cell_today {
+    background: #a1a1a1;
+    color: #000000;
+}
