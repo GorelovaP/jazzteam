@@ -5,8 +5,7 @@ import {rootReducer} from "./reducers";
 export const store = configureStore({
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().prepend(thunkMiddleware),
+        getDefaultMiddleware({serializableCheck: false}).prepend(thunkMiddleware),
 });
-//{serializableCheck: false}
 // @ts-ignore
 window.store = store;

@@ -5,17 +5,26 @@ import {useDispatch, useSelector} from "react-redux";
 import {BsFillCaretLeftFill} from "react-icons/bs";
 import {BsFillCaretRightFill} from "react-icons/bs";
 import {CalendarCell} from "./calendarCell/CalendarCell";
-import {setDataNewCurrentDayAC, setNewCalendarAC} from "../../redux/calendar/calendar-reducer";
+import {
+    getNotesWithLimitsFromDbTC,
+    setDataNewCurrentDayAC,
+    setEndDayCodeAC,
+    setNewCalendarAC,
+    setStartDayCodeAC
+} from "../../redux/calendar/calendar-reducer";
 import {useEffect} from "react";
-import {getCalendarSelector, getCurrentDaySelector} from "../../redux/calendar/calendar-selectors";
+import {
+    getCalendarSelector,
+    getCurrentDaySelector,
+} from "../../redux/calendar/calendar-selectors";
 
 export const CalendarPage = () => {
     const dispatch = useDispatch()
     const currentDay = useSelector(getCurrentDaySelector)
     const calendar = useSelector(getCalendarSelector)
 
-    useEffect(() => {
 
+    useEffect(() => {
         dispatch(setDataNewCurrentDayAC({currentDay: moment()}))
         getCalendarDays({currentDay: moment()})
     }, [])
@@ -23,10 +32,19 @@ export const CalendarPage = () => {
 
     const getCalendarDays = ({currentDay}) => {
         moment.updateLocale("en", {week: {dow: 1}})
+
         const startDay = moment(currentDay).startOf("month").startOf("week")
+        const startDayCode = startDay.format("X")
+        dispatch(setStartDayCodeAC({startDayCode}))
+
         const endDay = moment(currentDay).endOf("month").endOf("week")
+        const endDayCode = endDay.format("X")
+        dispatch(setEndDayCodeAC({endDayCode}))
+
         const monthName = ['Monday', 'Tuesday ', 'Wednesday ', 'Thursday ', 'Friday ', 'Saturday ', 'Sunday'];
+
         const calendar = [];
+
         const day = startDay.clone()
 
         while (!day.isAfter(endDay)) {
@@ -37,6 +55,7 @@ export const CalendarPage = () => {
             calendar[i].dayName = monthName[i]
         }
         dispatch(setNewCalendarAC({calendar}))
+        dispatch(getNotesWithLimitsFromDbTC({more: startDayCode, less: endDayCode}))
     }
 
 
@@ -57,9 +76,6 @@ export const CalendarPage = () => {
         dispatch(setDataNewCurrentDayAC(today))
         getCalendarDays(today)
     }
-
-
-
 
 
     return <ThemeWrapper>

@@ -3,18 +3,20 @@ import "./profilePage.css";
 import profilePhoto from "../../assets/profile/profilePhoto.png";
 import {useDispatch, useSelector} from "react-redux";
 import {BsSunFill} from "react-icons/bs";
-import {setToLocalStorageThemeTC} from "../../redux/profile/profile-reducer";
+import {getAllNotesFromDbTC, setToLocalStorageThemeTC} from "../../redux/profile/profile-reducer";
 import {
     getThemeSelector,
     getUserInformationSelector,
 } from "../../redux/profile/profile-selectors";
 import {useEffect} from "react";
 import {isLocalStorageEmptySelector} from "../../redux/app/app-selectors";
+import {ProfileNotes} from "./profileNotes/ProfileNotes";
 
 export const ProfilePage = () => {
     const userInformation = useSelector(getUserInformationSelector);
     const theme = useSelector(getThemeSelector);
     const isLocalStorageEmpty = useSelector(isLocalStorageEmptySelector);
+
 
     const dispatch = useDispatch();
 
@@ -22,6 +24,7 @@ export const ProfilePage = () => {
         if (isLocalStorageEmpty) {
             dispatch(setToLocalStorageThemeTC({theme: "dark"}));
         }
+        dispatch(getAllNotesFromDbTC())
     }, []);
 
     const changeTheme = () => {
@@ -68,6 +71,7 @@ export const ProfilePage = () => {
                             ))}
                         </ul>
                     </div>
+                    <ProfileNotes/>
                 </div>
             </div>
         </ThemeWrapper>

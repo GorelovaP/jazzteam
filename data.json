@@ -39,7 +39,6 @@
     },
     {
       "id": "02",
-      "isSelected": false,
       "rows": [
         {
           "prop": "text21",
@@ -304,7 +303,12 @@
       ]
     }
   ],
-  "calendarEvents": [
-
+  "calendarNotes": [
+    {
+      "id": "01",
+      "title": "new year's eve",
+      "description": "ho-ho-ho",
+      "date": 1672520397
+    }
   ]
 }

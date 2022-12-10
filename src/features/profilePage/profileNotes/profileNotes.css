@@ -1,0 +1,25 @@
+.profileNotes {
+    padding: 20px;
+}
+
+.profileNotes__header {
+    margin-top: 0;
+    color: black;
+}
+
+.profileNotes__list__date {
+    color: #8227b0cf;
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+.profileNotes__list__title {
+    color: black;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.profileNotes__list__description {
+    color: #2f2f2f;
+}

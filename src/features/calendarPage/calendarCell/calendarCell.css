@@ -2,7 +2,7 @@
 .calendar__table__cell {
     font-weight: bold;
     min-height: 140px;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     border: 1px solid #8d8d8d;
     background-color: #3e3e3e;
@@ -10,16 +10,39 @@
 
 .calendar__table__cell__day {
     display: flex;
-    justify-content: space-between;
-    text-align: right;
+    flex-direction: column;
+    height: 100%;
 }
 
-.calendar__table__cell__day__name {
+.calendar__table__cell__day_withNote {
+    background: rgba(121, 88, 135, 0.73);
+}
+
+.calendar__table__cell__day__data {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar__table__cell__day__data__name {
     font-weight: bold;
     color: #2ee59d;
 }
 
-.calendar__table__cell__day__number {
+.calendar__table__cell__day__noteArea {
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.calendar__table__cell__day__noteArea__note {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.calendar__table__cell__day__data__number {
     color: #8d8d8d;
 }
 
@@ -28,6 +51,19 @@
 }
 
 .calendar__table__cell_today {
-    background: #a1a1a1;
+    background: rgba(236, 236, 236, 0.62);
     color: #000000;
+    border: 5px solid #2ee59d;
+}
+
+.calendar__table__cell__day__noteArea__note__title {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.calendar__table__cell__day__noteArea__note__description {
+    width: 100%;
+    font-weight: normal;
+    padding: 0 5px;
+
 }
