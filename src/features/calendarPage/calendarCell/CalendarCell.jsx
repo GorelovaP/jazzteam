@@ -29,7 +29,6 @@ export const CalendarCell = ({dayCell, setViewedCell, setViewModeAddModal, setVi
     const handleClick = () => {
         setViewModeEditModal(true)
         setViewedCell(startOfDay)
-
     }
 
     return (

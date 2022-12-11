@@ -5,7 +5,7 @@ import {errorHandler} from "../../common/helpers/errorHendler";
 
 export const setToLocalStorageThemeTC = createAsyncThunk(
     "profile/setToLocalStorageTheme",
-    ({theme}, {dispatch}) => {
+    ({theme}) => {
         localStorage.setItem("Theme", JSON.stringify(theme));
         return {theme: theme};
     }
@@ -15,7 +15,6 @@ export const getAllNotesFromDbTC = createAsyncThunk(
     "profile/getAllNotesFromDb",
     async (params, {dispatch}) => {
         try {
-            debugger
             dispatch(setIsLoadingAC({isLoading: true}));
             const res = await calendarAPI.getAllNotes();
             return {data: res.data};

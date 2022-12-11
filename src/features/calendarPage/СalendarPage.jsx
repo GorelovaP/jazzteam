@@ -30,13 +30,12 @@ export const CalendarPage = () => {
     const calendar = useSelector(getCalendarSelector)
 
     useEffect(() => {
+        moment.updateLocale("en", {week: {dow: 1}})
         dispatch(setDataNewCurrentDayAC({currentDay: moment()}))
         getCalendarDays({currentDay: moment()})
     }, [])
 
     const getCalendarDays = ({currentDay}) => {
-        moment.updateLocale("en", {week: {dow: 1}})
-
         const startMonthDay = moment(currentDay).startOf("month").startOf("week")
         const startMonthDayCode = startMonthDay.format("X")
         dispatch(setStartMonthDayCodeAC({startMonthDayCode: startMonthDayCode}))
