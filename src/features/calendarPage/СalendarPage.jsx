@@ -7,47 +7,51 @@ import {BsFillCaretRightFill} from "react-icons/bs";
 import {CalendarCell} from "./calendarCell/CalendarCell";
 import {
     getNotesWithLimitsFromDbTC,
-    setDataNewCurrentDayAC,
-    setEndDayCodeAC,
+    setDataNewCurrentDayAC, setEndMonthDayCodeAC,
     setNewCalendarAC,
-    setStartDayCodeAC
+    setStartMonthDayCodeAC
 } from "../../redux/calendar/calendar-reducer";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {
     getCalendarSelector,
     getCurrentDaySelector,
 } from "../../redux/calendar/calendar-selectors";
+import {CalendarAddModal} from "./calendarModals/calendarAddModal/CalendarAddModal";
+import {CalendarEditModal} from "./calendarModals/calendarEditModal/CalendarEditModal";
 
 export const CalendarPage = () => {
+    const [viewModeAddModal, setViewModeAddModal] = useState(false)
+    const [viewModeEditModal, setViewModeEditModal] = useState(false)
+    const [viewedCell, setViewedCell] = useState(0)
+
     const dispatch = useDispatch()
+
     const currentDay = useSelector(getCurrentDaySelector)
     const calendar = useSelector(getCalendarSelector)
-
 
     useEffect(() => {
         dispatch(setDataNewCurrentDayAC({currentDay: moment()}))
         getCalendarDays({currentDay: moment()})
     }, [])
 
-
     const getCalendarDays = ({currentDay}) => {
         moment.updateLocale("en", {week: {dow: 1}})
 
-        const startDay = moment(currentDay).startOf("month").startOf("week")
-        const startDayCode = startDay.format("X")
-        dispatch(setStartDayCodeAC({startDayCode}))
+        const startMonthDay = moment(currentDay).startOf("month").startOf("week")
+        const startMonthDayCode = startMonthDay.format("X")
+        dispatch(setStartMonthDayCodeAC({startMonthDayCode: startMonthDayCode}))
 
-        const endDay = moment(currentDay).endOf("month").endOf("week")
-        const endDayCode = endDay.format("X")
-        dispatch(setEndDayCodeAC({endDayCode}))
+        const endMonthDay = moment(currentDay).endOf("month").endOf("week")
+        const endDayCode = endMonthDay.format("X")
+        dispatch(setEndMonthDayCodeAC({endDayCode}))
 
         const monthName = ['Monday', 'Tuesday ', 'Wednesday ', 'Thursday ', 'Friday ', 'Saturday ', 'Sunday'];
 
         const calendar = [];
 
-        const day = startDay.clone()
+        const day = startMonthDay.clone()
 
-        while (!day.isAfter(endDay)) {
+        while (!day.isAfter(endMonthDay)) {
             calendar.push(day.clone())
             day.add(1, "day")
         }
@@ -55,9 +59,8 @@ export const CalendarPage = () => {
             calendar[i].dayName = monthName[i]
         }
         dispatch(setNewCalendarAC({calendar}))
-        dispatch(getNotesWithLimitsFromDbTC({more: startDayCode, less: endDayCode}))
+        dispatch(getNotesWithLimitsFromDbTC({more: startMonthDayCode, less: endDayCode}))
     }
-
 
     const getPreviousMonth = () => {
         const previousMonth = {currentDay: moment(currentDay).subtract(1, "month").format('MM/DD/YYYY')}
@@ -77,8 +80,9 @@ export const CalendarPage = () => {
         getCalendarDays(today)
     }
 
-
     return <ThemeWrapper>
+        {viewModeAddModal && <CalendarAddModal viewedCell={viewedCell} close={() => setViewModeAddModal(false)}/>}
+        {viewModeEditModal && <CalendarEditModal viewedCell={viewedCell} close={() => setViewModeEditModal(false)}/>}
         <div className="calendarWrapper">
             <div className="calendar__settings">
                 <div className="calendar__settings__standard">
@@ -105,9 +109,16 @@ export const CalendarPage = () => {
                 </div>
             </div>
             <div className="calendar__table">
-                {calendar.map((dayCell, index) => <CalendarCell key={index} dayCell={dayCell}/>)}
+                {calendar.map((dayCell, index) => <CalendarCell key={index}
+                                                                dayCell={dayCell}
+                                                                setViewedCell={setViewedCell}
+                                                                setViewModeAddModal={setViewModeAddModal}
+                                                                setViewModeEditModal={setViewModeEditModal}
+
+                />)}
             </div>
         </div>
+
     </ThemeWrapper>
 }
 

@@ -15,7 +15,7 @@ export const ProfileNotes = () => {
                     notes.map(note => {
                         return <li key={note.date}>
                             <span className="profileNotes__list__date">
-                                {moment.unix(note.date).format("MM/DD/YYYY")}
+                                {moment.unix(note.date).format("DD/MM/YYYY")}
                             </span>
                             <span className="profileNotes__list__title">{note.title} - </span>
                             <span className="profileNotes__list__description">{note.description}</span>

@@ -2,9 +2,12 @@ import "./calendarCell.css"
 import * as moment from "moment/moment";
 import {useSelector} from "react-redux";
 import {getCurrentDaySelector, getNotesSelector} from "../../../redux/calendar/calendar-selectors";
+import {useState} from "react";
 
 
-export const CalendarCell = ({dayCell}) => {
+export const CalendarCell = ({dayCell, setViewedCell, setViewModeAddModal, setViewModeEditModal}) => {
+    const [canClick, setCanClick] = useState(false)
+
     const currentDay = useSelector(getCurrentDaySelector)
     const notes = useSelector(getNotesSelector)
 
@@ -14,11 +17,26 @@ export const CalendarCell = ({dayCell}) => {
     const startOfDay = dayCell.startOf('day').format("X")
     const endOfDay = dayCell.endOf('day').format("X")
     const note = notes.filter(note => note.date >= startOfDay && note.date <= endOfDay)
+    if (note.length && !canClick) {
+        setCanClick(true)
+    }
+
+    const onDoubleClick = () => {
+        setViewModeAddModal(true)
+        setViewedCell(startOfDay)
+    }
+
+    const handleClick = () => {
+        setViewModeEditModal(true)
+        setViewedCell(startOfDay)
+
+    }
 
     return (
-        <div className={`calendar__table__cell ${isCurrentDay(dayCell) ? "calendar__table__cell_today" : null}`}>
-            <div
-                className={`calendar__table__cell__day  ${note.length ? "calendar__table__cell__day_withNote" : ""}`}>
+        <div onDoubleClick={() => !canClick ? onDoubleClick() : () => false}
+             className={`calendar__table__cell ${isCurrentDay(dayCell) ? "calendar__table__cell_today" : null}`}>
+            <div onClick={() => canClick ? handleClick() : () => false}
+                 className={`calendar__table__cell__day  ${note.length ? "calendar__table__cell__day_withNote" : ""}`}>
                 <div className="calendar__table__cell__day__data">
                     {dayCell.dayName ?
                         <span className="calendar__table__cell__day__data__name">{dayCell.dayName}</span> :

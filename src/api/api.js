@@ -20,4 +20,10 @@ export const calendarAPI = {
     getAllNotes() {
         return instance.get(`calendarNotes`);
     },
+    setNewNote(newNote) {
+        return instance.post(`calendarNotes`, newNote);
+    },
+    changeNote(newNote, id) {
+        return instance.put(`calendarNotes/${id}`, newNote);
+    }
 };

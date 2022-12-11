@@ -4,11 +4,11 @@ export const getCurrentDaySelector = (state) => {
 export const getCalendarSelector = (state) => {
     return state.calendar.calendar
 }
-export const getEndDayCodeSelector = (state) => {
-    return state.calendar.endDayCode
+export const getEndMonthDayCodeSelector = (state) => {
+    return state.calendar.endMonthDayCode
 }
-export const getStartDayCodeSelector = (state) => {
-    return state.calendar.startDayCode
+export const getStartMonthDayCodeSelector = (state) => {
+    return state.calendar.startMonthDayCode
 }
 export const getNotesSelector = (state) => {
     return state.calendar.notes

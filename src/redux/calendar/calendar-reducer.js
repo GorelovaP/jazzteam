@@ -18,14 +18,58 @@ export const getNotesWithLimitsFromDbTC = createAsyncThunk(
     }
 );
 
+export const addNewNoteToDbTC = createAsyncThunk(
+    "calendar/addNewNoteToDb",
+    async ({
+               id,
+               title,
+               description,
+               date
+           }, {dispatch}) => {
+        try {
+            dispatch(setIsLoadingAC({isLoading: true}));
+            const res = await calendarAPI.setNewNote({id, title, description, date});
+            return {data: res.data}
+        } catch (err) {
+            errorHandler({err, dispatch});
+        } finally {
+            dispatch(setIsLoadingAC({isLoading: false}));
+        }
+    }
+);
+export const changeNoteInDbTC = createAsyncThunk(
+    "calendar/changeNoteInDb",
+    async ({
+               id,
+               title,
+               description,
+               date
+           }, {dispatch, getState}) => {
+        const state = getState();
+        try {
+            dispatch(setIsLoadingAC({isLoading: true}));
+            await calendarAPI.changeNote({id, title, description, date}, id);
+            dispatch(getNotesWithLimitsFromDbTC({
+                more: state.calendar.startMonthDayCode,
+                less: state.calendar.endMonthDayCode
+            }))
+        } catch (err) {
+            errorHandler({err, dispatch});
+        } finally {
+            dispatch(setIsLoadingAC({isLoading: false}));
+        }
+    }
+);
+
+
 const slice = createSlice({
     name: "calendar",
     initialState: {
         currentDay: "",
         calendar: [],
         notes: [],
-        startDayCode: "",
-        endDayCode: "",
+        startMonthDayCode: "",
+        endMonthDayCode: "",
     },
 
     reducers: {
@@ -35,20 +79,23 @@ const slice = createSlice({
         setNewCalendarAC(state, action) {
             state.calendar = action.payload.calendar
         },
-        setStartDayCodeAC(state, action) {
-            state.startDayCode = action.payload.startDayCode
+        setStartMonthDayCodeAC(state, action) {
+            state.startMonthDayCode = action.payload.startMonthDayCode
         },
-        setEndDayCodeAC(state, action) {
-            state.endDayCode = action.payload.endDayCode
+        setEndMonthDayCodeAC(state, action) {
+            state.endMonthDayCode = action.payload.endMonthDayCode
         }
     },
     extraReducers: (builder) => {
         builder.addCase(getNotesWithLimitsFromDbTC.fulfilled, (state, action) => {
             state.notes = action.payload.data
         });
+        builder.addCase(addNewNoteToDbTC.fulfilled, (state, action) => {
+            state.notes = [...state.notes, action.payload.data]
+        });
     },
 });
 
 
 export const calendarReducer = slice.reducer;
-export const {setDataNewCurrentDayAC, setNewCalendarAC, setStartDayCodeAC, setEndDayCodeAC} = slice.actions;
+export const {setDataNewCurrentDayAC, setNewCalendarAC, setStartMonthDayCodeAC, setEndMonthDayCodeAC} = slice.actions;

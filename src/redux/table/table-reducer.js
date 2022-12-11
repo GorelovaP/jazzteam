@@ -39,7 +39,6 @@ export const setTableDataToDbTC = createAsyncThunk(
           })
           .filter((el) => el !== undefined)[0];
         await tableAPI.setTableData(newData, id);
-        debugger;
         dispatch(getTableDataFromDbTC());
       }
     } catch (err) {

@@ -305,10 +305,10 @@
   ],
   "calendarNotes": [
     {
-      "id": "01",
+      "id": "d50e29e0-793b-11ed-8aaa-472992e93f2f",
       "title": "new year's eve",
-      "description": "ho-ho-ho",
-      "date": 1672520397
+      "description": "HoHoHo",
+      "date": "1672434000"
     }
   ]
 }
