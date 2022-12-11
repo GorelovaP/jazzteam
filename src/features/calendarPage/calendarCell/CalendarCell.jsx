@@ -18,11 +18,13 @@ export const CalendarCell = memo(
     const notes = useSelector(getNotesSelector);
 
     const isCurrentDay = (day) => moment().isSame(day, "day");
+
     const isDaysFromSelectedMonth = (day) =>
       moment(currentDay).isSame(day, "month");
 
     const startOfDay = dayCell.startOf("day").format("X");
     const endOfDay = dayCell.endOf("day").format("X");
+
     const note = notes.filter(
       (note) => note.date >= startOfDay && note.date <= endOfDay
     );

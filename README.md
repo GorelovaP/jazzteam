@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+## To start the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To start the project, you need to enter the command:
 
-## Available Scripts
+### `yarn serve`
 
-In the project directory, you can run:
+After that, the server will start on http://localhost:4000 port. This server is implemented using a json-server based on
+a json file.
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in the development mode.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `yarn build`
+## About The Project:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+DEMO: https://jazzteam-gorelovap.vercel.app/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This application is a test task application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This application implements log in and log out fictitious function. The logged-in user's data is stored in the Local
+storage.
 
-### `yarn eject`
+After successful login, the user gets to the profile page, where he can change the color scheme of the application, view
+his contact in detail and see the list of events, that were added to the calendar.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+On the "info" page he can find additional information.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+On the calendar page there is a notable calendar, which contains all the standard functions of a calendar. As well, you
+can add and edit events. The search by event and the transition to this event is also implemented. Event data is stored
+in a json file, interaction with them is carried out using the json server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The Table page shows a table of synonyms and antonyms developed in accordance with the task. Each cell of the table is
+edited. The data is stored in a json file, i, interaction with them is carried out using the json server. You can also
+select lines
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+All tasks have been completed
 
-## Learn More
+<hr/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Built With:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- Redux
+- JavaScript
+- Formik
+- Yup
+- CSS
+- Json server
+- Moment.js
+- GIT
+- Vercel
 
-### Code Splitting
+<hr/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact:
 
-### Analyzing the Bundle Size
+GorelovaP
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Email: gorelic2000p@gmail.com
+- LinkedIn: https://www.linkedin.com/in/polin%D0%B0-gorelova/
+- GitHub: https://github.com/GorelovaP
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<hr/>

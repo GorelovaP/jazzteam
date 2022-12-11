@@ -2,7 +2,7 @@ import "./supperButton.css";
 import React from "react";
 
 const SuperButton = ({ red, className, ...restProps }) => {
-  const finalClassName = `${s.default} ${red ? s.red : ""} `;
+  const finalClassName = `defaultBtn ${red ? "defaultBtn_red" : ""} `;
 
   return <button className={finalClassName} {...restProps} />;
 };

@@ -1,4 +1,4 @@
-.default {
+.defaultBtn {
   text-decoration: none;
   display: inline-block;
   width: 140px;
@@ -18,18 +18,21 @@
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
-.default:hover {
+
+.defaultBtn:hover {
   background: #2ee59d;
   box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
   color: white;
   transform: translateY(-7px);
 }
-.default:disabled {
+
+.defaultBtn:disabled {
   transform: translateY(0px);
   color: rgba(82, 79, 78, 0.48);
   background: rgba(203, 203, 203, 0.47);
 }
-.default:disabled:hover {
+
+.defaultBtn:disabled:hover {
   animation-name: wobble;
   -webkit-animation-duration: 0.8s;
   -webkit-animation-iteration-count: 1;
@@ -37,6 +40,7 @@
   background: #cbcbcb77;
   box-shadow: none;
 }
+
 @keyframes wobble {
   0% {
     -webkit-transform: none;
@@ -69,10 +73,11 @@
   }
 }
 
-.red {
+.defaultBtn_red {
   color: #ff3c3c;
 }
-.red:hover {
+
+.defaultBtn_red:hover {
   background: red;
   box-shadow: 0 15px 20px rgba(229, 46, 46, 0.4);
 }
