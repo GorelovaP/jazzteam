@@ -1,21 +1,21 @@
 .modalBg__modal__header {
-    text-align: center;
-    font-weight: bold;
-    color: #2ee59d;
-    font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: #2ee59d;
+  font-size: 24px;
 }
 
 .modalBg__modal__button {
-    margin-top: 10px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .modalBg__modal__input {
-    position: relative;
-    margin-top: 20px;
+  position: relative;
+  margin-top: 20px;
 }
 
 .modalBg__modal__input__error {
-    position: absolute;
-    bottom: -20px;
+  position: absolute;
+  bottom: -20px;
 }

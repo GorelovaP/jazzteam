@@ -1,7 +1,8 @@
-import { memo, useState } from "react";
-import { useDispatch } from "react-redux";
-import { setTableDataToDbTC } from "../../../redux/table/table-reducer";
 import "./editableSpan.css";
+import { memo, useState } from "react";
+import React from "react";
+import { setTableDataToDbTC } from "../../../redux/table/table-reducer";
+import { useDispatch } from "react-redux";
 
 export const EditableSpan = memo(({ fieldValue, id, prop }) => {
   const dispatch = useDispatch();
@@ -38,3 +39,4 @@ export const EditableSpan = memo(({ fieldValue, id, prop }) => {
     <span onClick={() => changeEditMode(true)}>{fieldValue}</span>
   );
 });
+EditableSpan.displayName = "EditableSpan";

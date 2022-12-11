@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import {
-  setLoginUserInformationAC,
-  setThemeToStateAC,
-} from "../profile/profile-reducer";
-import {
   deleteFromLocalStorageTC,
   setToLocalStorageTC,
 } from "../app/app-reducer";
+import {
+  setLoginUserInformationAC,
+  setThemeToStateAC,
+} from "../profile/profile-reducer";
 
 //TC are implemented for easier further expansion of the application (if suddenly it will be)
 export const LoginTC = createAsyncThunk(

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { errorHandler } from "../../common/helpers/errorHendler";
 import { setIsLoadingAC } from "../app/app-reducer";
 import { tableAPI } from "../../api/api";
-import { errorHandler } from "../../common/helpers/errorHendler";
 
 export const getTableDataFromDbTC = createAsyncThunk(
   "table/getTableDataFromDb",

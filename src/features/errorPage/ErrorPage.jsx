@@ -1,8 +1,9 @@
-import SuperButton from "../../common/components/supperButton/SupperButton";
-import { PATH } from "../../app/pagesRoutes/PagesRoutes";
-import { useNavigate } from "react-router-dom";
 import "./errorPage.css";
+import { PATH } from "../../app/pagesRoutes/PagesRoutes";
+import React from "react";
+import SuperButton from "../../common/components/supperButton/SupperButton";
 import { ThemeWrapper } from "../../common/components/themeWrapper/ThemeWrapper";
+import { useNavigate } from "react-router-dom";
 
 export const ErrorPage = () => {
   let navigate = useNavigate();

@@ -1,5 +1,6 @@
 import "./infoCard.css";
 import { HiLink } from "react-icons/hi";
+import React from "react";
 
 export const InfoCard = ({ name, image, link }) => {
   return (

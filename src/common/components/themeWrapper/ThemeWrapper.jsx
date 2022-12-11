@@ -1,7 +1,8 @@
-import React from "react";
 import "./themeWrapper.css";
-import { useSelector } from "react-redux";
+
+import React from "react";
 import { getThemeSelector } from "../../../redux/profile/profile-selectors";
+import { useSelector } from "react-redux";
 
 export const ThemeWrapper = ({ children }) => {
   const theme = useSelector(getThemeSelector);

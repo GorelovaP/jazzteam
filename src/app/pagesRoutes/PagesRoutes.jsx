@@ -1,13 +1,13 @@
-import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { ErrorPage } from "../../features/errorPage/ErrorPage";
-import { ProtectedLoginRoute } from "./protectedLoginRoutes/ProtectedLoginRoute";
 import { CalendarPage } from "../../features/calendarPage/СalendarPage";
-import { TablePage } from "../../features/tablePage/TablePage";
-import { ProfilePage } from "../../features/profilePage/ProfilePage";
+import { ErrorPage } from "../../features/errorPage/ErrorPage";
 import { InfoPage } from "../../features/infoPage/InfoPage";
-import { MainPage } from "../../features/mainPage/MainPage";
 import { LoginPage } from "../../features/loginPage/LoginPage";
+import { MainPage } from "../../features/mainPage/MainPage";
+import { ProfilePage } from "../../features/profilePage/ProfilePage";
+import { ProtectedLoginRoute } from "./protectedLoginRoutes/ProtectedLoginRoute";
+import React from "react";
+import { TablePage } from "../../features/tablePage/TablePage";
 
 export const PATH = {
   MAIN: "/",

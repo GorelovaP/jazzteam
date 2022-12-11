@@ -1,10 +1,13 @@
-import { memo, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { setAppErrorAC } from "../../../redux/app/app-reducer";
-import { VscChromeClose } from "react-icons/vsc";
 import "./snackBarError.css";
+import { memo, useEffect } from "react";
 
-export const MySnackbar = memo(({ text }) => {
+import React from "react";
+import { VscChromeClose } from "react-icons/vsc";
+import { setAppErrorAC } from "../../../redux/app/app-reducer";
+
+import { useDispatch } from "react-redux";
+
+export const SnackBarError = memo(({ text }) => {
   const dispatch = useDispatch();
   const onClickAction = () => {
     dispatch(setAppErrorAC(""));

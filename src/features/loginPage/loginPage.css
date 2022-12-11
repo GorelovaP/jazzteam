@@ -1,52 +1,52 @@
 .loginPage__Wrapper {
-    height: calc(100vh - 70px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loginPage__Wrapper__LoginForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    min-width: 400px;
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid #2ee59d;
-    background: rgb(60, 64, 64);
-    background: linear-gradient(
-            3deg,
-            rgba(60, 64, 64, 0.7) 0%,
-            rgba(46, 229, 157, 0.37) 100%
-    );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #2ee59d;
+  background: rgb(60, 64, 64);
+  background: linear-gradient(
+    3deg,
+    rgba(60, 64, 64, 0.7) 0%,
+    rgba(46, 229, 157, 0.37) 100%
+  );
 }
 
 .loginPage__Wrapper__LoginForm__input {
-    position: relative;
-    width: 100%;
-    margin-top: 20px;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .loginPage__Wrapper__LoginForm__input__error {
-    position: absolute;
-    color: red;
+  position: absolute;
+  color: red;
 }
 
 .loginPage__Wrapper__LoginForm__button {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .loginPage__Wrapper__LoginForm__errorArea {
-    box-sizing: border-box;
-    display: block;
-    max-width: 360px;
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 5px;
-    background: #ffbbaa;
-    color: #fc0000;
-    word-wrap: normal;
-    text-align: center;
+  box-sizing: border-box;
+  display: block;
+  max-width: 360px;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+  background: #ffbbaa;
+  color: #fc0000;
+  word-wrap: normal;
+  text-align: center;
 }

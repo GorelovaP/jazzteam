@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
-import bagan from "../../assets/information/img1.png";
-import hitachi from "../../assets/information/img5.png";
 import angkor from "../../assets/information/img.png";
-import salar from "../../assets/information/img4.png";
-import zhangye from "../../assets/information/img2.png";
+import bagan from "../../assets/information/img1.png";
+import { createSlice } from "@reduxjs/toolkit";
+import hitachi from "../../assets/information/img5.png";
 import li from "../../assets/information/img3.png";
+import salar from "../../assets/information/img4.png";
 import { v1 } from "uuid";
+import zhangye from "../../assets/information/img2.png";
 
 const slice = createSlice({
   name: "info",

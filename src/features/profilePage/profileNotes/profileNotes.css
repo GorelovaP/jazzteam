@@ -1,38 +1,38 @@
 .profileNotes {
-    padding: 20px;
+  padding: 20px;
 }
 
 .profileNotes__header {
-    margin-top: 0;
-    color: black;
+  margin-top: 0;
+  color: black;
 }
 
 .profileNotes__list {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .profileNotes__list__element {
-    list-style-type: none;
-    background: rgba(105, 81, 115, 0.66);
-    padding: 5px;
-    border-radius: 10px;
-    margin: 5px;
+  list-style-type: none;
+  background: rgba(105, 81, 115, 0.66);
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .profileNotes__list__element__date {
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    padding-right: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 5px;
 }
 
 .profileNotes__list__element__title {
-    color: black;
-    font-weight: bold;
-    padding-right: 5px;
+  color: black;
+  font-weight: bold;
+  padding-right: 5px;
 }
 
 .profileNotes__list__element__description {
-    color: #2f2f2f;
+  color: #2f2f2f;
 }

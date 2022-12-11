@@ -1,16 +1,16 @@
-import {combineReducers} from "redux";
-import {appReducer} from "./app/app-reducer";
-import {profileReducer} from "./profile/profile-reducer";
-import {loginReducer} from "./login/login-reducer";
-import {infoReducer} from "./info/info-reducer";
-import {tableReducer} from "./table/table-reducer";
-import {calendarReducer} from "./calendar/calendar-reducer";
+import { appReducer } from "./app/app-reducer";
+import { calendarReducer } from "./calendar/calendar-reducer";
+import { combineReducers } from "redux";
+import { infoReducer } from "./info/info-reducer";
+import { loginReducer } from "./login/login-reducer";
+import { profileReducer } from "./profile/profile-reducer";
+import { tableReducer } from "./table/table-reducer";
 
 export const rootReducer = combineReducers({
-    app: appReducer,
-    profile: profileReducer,
-    login: loginReducer,
-    info: infoReducer,
-    table: tableReducer,
-    calendar: calendarReducer
+  app: appReducer,
+  profile: profileReducer,
+  login: loginReducer,
+  info: infoReducer,
+  table: tableReducer,
+  calendar: calendarReducer,
 });

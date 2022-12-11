@@ -1,8 +1,11 @@
-import { ThemeWrapper } from "../../common/components/themeWrapper/ThemeWrapper";
-import { useSelector } from "react-redux";
 import "./infoPage.css";
+
 import { InfoCard } from "./infoCard/InfoCard";
+import React from "react";
+import { ThemeWrapper } from "../../common/components/themeWrapper/ThemeWrapper";
 import { getCardsSelector } from "../../redux/info/info-selectors";
+
+import { useSelector } from "react-redux";
 
 export const InfoPage = () => {
   const information = useSelector(getCardsSelector);
@@ -11,7 +14,7 @@ export const InfoPage = () => {
     <ThemeWrapper>
       <div className="informationPageWrapper">
         <h2 className="informationPageWrapper__header">
-          Places, where you definitely haven't been
+          Places, where you definitely haven`&apos;t been
         </h2>
         <div className="informationPageWrapper__cardArea">
           {information.map((el) => (

@@ -1,0 +1,19 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": "plugin:react/recommended",
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["sort-imports-requires", "react"],
+  "rules": {
+    "sort-imports-requires/sort-imports": "error",
+    "sort-imports-requires/sort-requires": "error",
+    "react/prop-types": 0,
+    "react/display-name": 0
+  }
+}
