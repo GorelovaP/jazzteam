@@ -62,12 +62,28 @@ export const changeNoteInDbTC = createAsyncThunk(
 );
 
 
+export const getAllNotesFromDbTC = createAsyncThunk(
+    "calendar/getAllNotesFromDb",
+    async (params, {dispatch}) => {
+        try {
+            dispatch(setIsLoadingAC({isLoading: true}));
+            const res = await calendarAPI.getAllNotes();
+            return {data: res.data};
+        } catch (err) {
+            errorHandler({err, dispatch});
+        } finally {
+            dispatch(setIsLoadingAC({isLoading: false}));
+        }
+    }
+);
+
 const slice = createSlice({
     name: "calendar",
     initialState: {
         currentDay: "",
         calendar: [],
         notes: [],
+        allNotes: [],
         startMonthDayCode: "",
         endMonthDayCode: "",
     },
@@ -92,6 +108,9 @@ const slice = createSlice({
         });
         builder.addCase(addNewNoteToDbTC.fulfilled, (state, action) => {
             state.notes = [...state.notes, action.payload.data]
+        });
+        builder.addCase(getAllNotesFromDbTC.fulfilled, (state, action) => {
+            state.allNotes = action.payload.data;
         });
     },
 });

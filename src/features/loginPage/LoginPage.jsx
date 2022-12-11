@@ -53,14 +53,16 @@ export const LoginPage = () => {
                                 color: "darkgray",
                                 fontSize: "1.5em",
                                 position: "absolute",
-                                top: "30px",
+                                top: "10px",
                                 left: "5px",
                             }}
                         />
+
                         <SupperInput
                             type="text"
                             placeholder="User name"
                             error={!!(formik.errors.userName && formik.touched.userName)}
+                            className={"sss"}
                             {...formik.getFieldProps("userName")}
                         />
 
@@ -76,7 +78,7 @@ export const LoginPage = () => {
                                 color: "darkgray",
                                 fontSize: "1.5em",
                                 position: "absolute",
-                                top: "30px",
+                                top: "10px",
                                 left: "5px",
                             }}
                         />

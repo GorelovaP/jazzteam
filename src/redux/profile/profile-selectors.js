@@ -7,6 +7,3 @@ export const getUserInformationSelector = (state) => {
 export const getUserNameSelector = (state) => {
   return state.profile.userInformation.LoginUserName;
 };
-export const getALlNotesSelector = (state) => {
-  return state.profile.notes;
-};

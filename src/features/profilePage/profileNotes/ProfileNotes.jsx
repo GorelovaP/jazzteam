@@ -1,11 +1,11 @@
 import moment from "moment/moment";
 import {useSelector} from "react-redux";
 import "./profileNotes.css"
-import {getALlNotesSelector} from "../../../redux/profile/profile-selectors";
+import {getAllNotesSelector} from "../../../redux/calendar/calendar-selectors";
 
 
 export const ProfileNotes = () => {
-    const notes = useSelector(getALlNotesSelector);
+    const notes = useSelector(getAllNotesSelector);
 
     return (
         <div className="profileNotes">

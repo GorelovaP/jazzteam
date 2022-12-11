@@ -13,3 +13,6 @@ export const getStartMonthDayCodeSelector = (state) => {
 export const getNotesSelector = (state) => {
     return state.calendar.notes
 }
+export const getAllNotesSelector = (state) => {
+    return state.calendar.allNotes
+}

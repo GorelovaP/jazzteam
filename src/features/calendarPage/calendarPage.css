@@ -3,6 +3,12 @@
     height: 100%;
     box-sizing: border-box;
     padding: 30px 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar {
+    width: 100%;
 }
 
 .calendar__settings {
@@ -16,6 +22,7 @@
     background: #343434;
     min-width: 828px;
 }
+
 
 .calendar__settings__standard {
     display: flex;
@@ -56,4 +63,5 @@
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(5, 1fr);
 }
+
 

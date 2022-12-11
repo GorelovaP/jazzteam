@@ -3,7 +3,7 @@ import "./profilePage.css";
 import profilePhoto from "../../assets/profile/profilePhoto.png";
 import {useDispatch, useSelector} from "react-redux";
 import {BsSunFill} from "react-icons/bs";
-import {getAllNotesFromDbTC, setToLocalStorageThemeTC} from "../../redux/profile/profile-reducer";
+import { setToLocalStorageThemeTC} from "../../redux/profile/profile-reducer";
 import {
     getThemeSelector,
     getUserInformationSelector,
@@ -11,6 +11,7 @@ import {
 import {useEffect} from "react";
 import {isLocalStorageEmptySelector} from "../../redux/app/app-selectors";
 import {ProfileNotes} from "./profileNotes/ProfileNotes";
+import {getAllNotesFromDbTC} from "../../redux/calendar/calendar-reducer";
 
 export const ProfilePage = () => {
     const userInformation = useSelector(getUserInformationSelector);

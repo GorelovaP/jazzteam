@@ -309,6 +309,24 @@
       "title": "new year's eve",
       "description": "HoHoHo",
       "date": "1672434000"
+    },
+    {
+      "id": "52b19af0-7971-11ed-90cb-830d63bac75b",
+      "title": "Christmas",
+      "description": "Merry Christmas !!!",
+      "date": "1673038800"
+    },
+    {
+      "id": "7bed7ba0-7971-11ed-90cb-830d63bac75b",
+      "title": "Defender of the Fatherland day",
+      "description": " It is a holiday observed in Belarus",
+      "date": "1677099600"
+    },
+    {
+      "id": "ac15f960-7971-11ed-90cb-830d63bac75b",
+      "title": "International Women's Day",
+      "description": " Flowers))",
+      "date": "1678222800"
     }
   ]
 }

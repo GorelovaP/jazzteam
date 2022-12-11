@@ -9,3 +9,13 @@
     margin-top: 10px;
     text-align: center;
 }
+
+.modalBg__modal__input {
+    position: relative;
+    margin-top: 20px;
+}
+
+.modalBg__modal__input__error {
+    position: absolute;
+    bottom: -20px;
+}
