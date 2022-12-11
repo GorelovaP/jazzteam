@@ -18,7 +18,6 @@ export const ProfilePage = () => {
     const theme = useSelector(getThemeSelector);
     const isLocalStorageEmpty = useSelector(isLocalStorageEmptySelector);
 
-
     const dispatch = useDispatch();
 
     useEffect(() => {

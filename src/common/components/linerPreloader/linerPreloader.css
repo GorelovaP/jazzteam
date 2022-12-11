@@ -1,0 +1,21 @@
+.linerPreloader {
+    position: relative;
+    height: 4px;
+    border-radius: 4px;
+    background-size: 20%;
+    background: rgba(204, 204, 204, 0.43) linear-gradient(to right, rgba(135, 238, 206, 0.47), rgba(46, 229, 157, 0.36)) repeat-y -25% 0;
+    animation: scroll 1.2s ease-in-out infinite;
+    transition-delay: 1s;
+}
+
+@keyframes scroll {
+    25% {
+        background-size: 40%
+    }
+    50% {
+        background-size: 80%;
+    }
+    100% {
+        background-position: 125% 0;
+    }
+}

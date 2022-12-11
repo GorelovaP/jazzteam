@@ -2,10 +2,10 @@ import "./calendarCell.css"
 import * as moment from "moment/moment";
 import {useSelector} from "react-redux";
 import {getCurrentDaySelector, getNotesSelector} from "../../../redux/calendar/calendar-selectors";
-import {useState} from "react";
+import {memo, useState} from "react";
 
 
-export const CalendarCell = ({dayCell, setViewedCell, setViewModeAddModal, setViewModeEditModal}) => {
+export const CalendarCell = memo(({dayCell, setViewedCell, setViewModeAddModal, setViewModeEditModal}) => {
     const [canClick, setCanClick] = useState(false)
 
     const currentDay = useSelector(getCurrentDaySelector)
@@ -62,5 +62,5 @@ export const CalendarCell = ({dayCell, setViewedCell, setViewModeAddModal, setVi
         </div>
 
     )
-}
+})
 

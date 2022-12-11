@@ -12,7 +12,7 @@ import {
     setNewCalendarAC,
     setStartMonthDayCodeAC
 } from "../../redux/calendar/calendar-reducer";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {
     getCalendarSelector,
     getCurrentDaySelector, getNotesSelector,
@@ -43,7 +43,7 @@ export const CalendarPage = () => {
         dispatch(getAllNotesFromDbTC())
     }, [notes])
 
-    const getCalendarDays = ({currentDay}) => {
+    const getCalendarDays = useCallback(({currentDay}) => {
         const startMonthDay = moment(currentDay).startOf("month").startOf("week")
         const startMonthDayCode = startMonthDay.format("X")
         dispatch(setStartMonthDayCodeAC({startMonthDayCode: startMonthDayCode}))
@@ -70,7 +70,7 @@ export const CalendarPage = () => {
         }
         dispatch(setNewCalendarAC({calendar}))
         dispatch(getNotesWithLimitsFromDbTC({more: startMonthDayCode, less: endDayCode}))
-    }
+    }, [currentDay])
 
     const getPreviousMonth = () => {
         const previousMonth = {currentDay: moment(currentDay).subtract(1, "month").format('MM/DD/YYYY')}
@@ -124,16 +124,13 @@ export const CalendarPage = () => {
                     </div>
                 </div>
                 <div className="calendar__table">
-
                     {calendar.map((dayCell) => <CalendarCell key={dayCell.id}
                                                              dayCell={dayCell}
                                                              setViewedCell={setViewedCell}
                                                              setViewModeAddModal={setViewModeAddModal}
                                                              setViewModeEditModal={setViewModeEditModal}
-
                         />
                     )}
-
                 </div>
             </div>
             <CalendarDropList goToNote={goToNote}/>

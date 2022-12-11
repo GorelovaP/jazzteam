@@ -13,12 +13,12 @@ export const ProfileNotes = () => {
             <ul className="profileNotes__list">
                 {
                     notes.map(note => {
-                        return <li key={note.date}>
-                            <span className="profileNotes__list__date">
+                        return <li key={note.date} className="profileNotes__list__element">
+                            <span className="profileNotes__list__element__date">
                                 {moment.unix(note.date).format("DD/MM/YYYY")}
                             </span>
-                            <span className="profileNotes__list__title">{note.title} - </span>
-                            <span className="profileNotes__list__description">{note.description}</span>
+                            <span className="profileNotes__list__element__title">{note.title} - </span>
+                            <span className="profileNotes__list__element__description">{note.description}</span>
                         </li>
                     })
                 }
