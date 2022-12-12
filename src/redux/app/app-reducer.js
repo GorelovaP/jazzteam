@@ -39,7 +39,7 @@ export const deleteFromLocalStorageTC = createAsyncThunk(
   }
 );
 
-const slice = createSlice({
+export const slice = createSlice({
   name: "app",
   initialState: {
     error: null,

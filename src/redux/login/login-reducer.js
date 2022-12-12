@@ -23,13 +23,13 @@ export const LoginTC = createAsyncThunk(
         Phone: "+375 29 XXX XX XX",
         EnglishLevel: "B1",
       };
-      dispatch(setLoginErrorAC({ loginError: "" }));
+      dispatch(setLoginError({ loginError: "" }));
       dispatch(setLoginUserInformationAC(NewUserInformation));
       dispatch(setToLocalStorageTC({ userInformation: NewUserInformation }));
       return true;
     } else {
       dispatch(
-        setLoginErrorAC({
+        setLoginError({
           loginError:
             "The username or password is entered incorrectly. Try again :)",
         })
@@ -49,14 +49,14 @@ export const LogoutTC = createAsyncThunk(
   }
 );
 
-const slice = createSlice({
+export const slice = createSlice({
   name: "login",
   initialState: {
     loginError: "",
     isLoggedIn: false,
   },
   reducers: {
-    setLoginErrorAC(state, action) {
+    setLoginError(state, action) {
       state.loginError = action.payload.loginError;
     },
     setIsLoggedIn(state, action) {
@@ -74,4 +74,4 @@ const slice = createSlice({
 });
 
 export const loginReducer = slice.reducer;
-export const { setLoginErrorAC, setIsLoggedIn } = slice.actions;
+export const { setLoginError, setIsLoggedIn } = slice.actions;

@@ -1,23 +1,7 @@
-## To start the project
-
-To start the project, you need to enter the command:
-
-### `yarn serve`
-
-After that, the server will start on http://localhost:4000 port. This server is implemented using a json-server based on
-a json file.
-
-### `yarn start`
-
-Runs the app in the development mode.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.
-
 ## About The Project:
 
-DEMO: https://jazzteam-gorelovap.vercel.app/
+DEMO: https://jazzteam-gorelovap.vercel.app/  
+test data: (login : Admin, password: 12345678)
 
 This application is a test task application.
 
@@ -40,6 +24,23 @@ select lines
 All tasks have been completed
 
 <hr/>
+
+## To start the project
+
+To start the project, you need to enter the command:
+
+### `yarn serve`
+
+After that, the server will start on http://localhost:4000 port. This server is implemented using a json-server based on
+a json file.
+
+### `yarn start`
+
+Runs the app in the development mode.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.
 
 ## Built With:
 

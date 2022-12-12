@@ -8,7 +8,7 @@ export const setToLocalStorageThemeTC = createAsyncThunk(
   }
 );
 
-const slice = createSlice({
+export const slice = createSlice({
   name: "profile",
   initialState: {
     theme: "dark",

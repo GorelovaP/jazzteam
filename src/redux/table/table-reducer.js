@@ -49,7 +49,7 @@ export const setTableDataToDbTC = createAsyncThunk(
   }
 );
 
-const slice = createSlice({
+export const slice = createSlice({
   name: "table",
   initialState: {
     tableInfo: [],
@@ -57,9 +57,6 @@ const slice = createSlice({
     totalAmount: null,
   },
   reducers: {
-    setAppErrorAC(state, action) {
-      state.error = action.payload.error;
-    },
     changeIsSelectedAC(state, action) {
       const objIndex = state.tableInfo.findIndex(
         (obj) => obj.id === action.payload.id
