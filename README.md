@@ -45,7 +45,7 @@ Launches the test runner in the interactive watch mode.
 ## Built With:
 
 - React
-- Redux
+- Redux Toolkit
 - JavaScript
 - Formik
 - Yup
